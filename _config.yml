@@ -1,125 +1,22 @@
 # Setup
-title              : Hongzheng Chen (陈鸿峥)
-title_separator    : "-"
-tagline            : 'Blog'
-description        : '<p style="text-indent:2em">永不屈服于荒诞的世界，不停止自由地追逐繁星。 </p><br/>'
-url                : https://chhzh123.github.io
+title:               Lanyon
+tagline:             'A Jekyll theme'
+description:         'A reserved <a href="https://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+url:                 http://lanyon.getpoole.com
+baseurl:             ''
+paginate:            5
+permalink:           pretty
 
 # About/contact
 author:
-  name             : Hongzheng Chen
-  email            : chenhzh37@mail2.sysu.edu.cn
-  avatar           : "profile-meow.jpg"
-  bio              : "A senior student in Sun Yat-sen University"
-  location         : "Guangzhou, China"
-  employer         :
-  googlescholar    :
-  email            :
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              :
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         :
-  foursquare       :
-  github           : "chhzh123"
-  google_plus      :
-  keybase          :
-  instagram        :
-  impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
-  lastfm           :
-  linkedin         :
-  orcid            : #"http://orcid.org/yourorcidurl"
-  pinterest        :
-  soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
-  steam            :
-  tumblr           :
-  twitter          :
-  vine             :
-  weibo            :
-  xing             :
-  youtube          :
-  wikipedia        :
-
-# Custom vars
-version:             2.0
-
-# Reading Files
-include:
-  - .htaccess
-  - _pages
-  - files
-exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
-  - CHANGELOG
-  - Capfile
-  - Gemfile
-  - Gruntfile.js
-  - LICENSE
-  - README
-  - Rakefile
-  - assets/js/_main.js
-  - assets/js/plugins
-  - assets/js/vendor
-  - config
-  - gulpfile.js
-  - log
-  - node_modules
-  - package.json
-  - tmp
-  - vendor
-
-# Defaults
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: default-old
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  # _pages
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: true
-encoding: "utf-8"
-
-# Permalinks
-permalink:           /blogs/:year-:month-:day-:title/
-
-# Sass/SCSS
-sass:
-  sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  name:              Mark Otto
+  url:               https://twitter.com/mdo
+  email:             markdotto@gmail.com
 
 # Gems
 plugins:
   - jekyll-paginate
 
-# feed
-# atom_feed:
-#   path                   : # blank (default) uses feed.xml
-
-# KaTeX
-kramdown:
-  input: GFM
-  auto_ids: true
-  # parse_block_html: true
-  math_engine: mathjax
-  # math_engine: nil # for katex (because kramdown defaults to mathjax)
-
-excerpt_separator: '<!--more-->'
+# Custom vars
+version:             1.1.0
+google_analytics_id: #UA-XXXX-Y

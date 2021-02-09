@@ -1,8 +1,8 @@
 # Ignore docs files
 _gh_pages
 _site
-_drafts
 .ruby-version
+.jekyll-cache
 
 # Numerous always-ignore extensions
 *.diff
@@ -28,7 +28,6 @@ Thumbs.db
 nbproject
 *.sublime-project
 *.sublime-workspace
-.vscode
 .idea
 
 # Komodo
@@ -42,7 +41,3 @@ validation-report.json
 # Folders to ignore
 node_modules
 bower_components
-
-.sass-cache
-vendor
-Gemfile.lock
