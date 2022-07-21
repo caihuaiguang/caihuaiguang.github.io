@@ -1,4 +1,18 @@
-# jemdoc: menu{MENU}{index.html}, showsource
+# jemdoc: menu{MENU}{index.html}, showsource 
+==Huaiguang Cai （这行字同时还会显示在网页标签页）
+
+~~~
+{}{img_left}{pictures/chg.jpg}{alt text}{160}{160}{https://raw.githubusercontent.com/Y-boy/Y-boy.github.io/master/}
+PhD,\n
+College of Computer, \n
+[https://english.nudt.edu.cn/ National University of Defense Technology (NUDT)], \n
+Deya Road, Kaifu District, \n
+Changsha City, Hunan Province, P.R. China. \n
+Phone: +86 XXX-XXXX-XXXX \n
+E-mail: XXX@nudt.edu.com \n
+Github Page: [http://y-boy.github.io y-boy.github.io] \n
+~~~
+
 = jemdoc -- light markup
 [http://stanford.edu/~jacobm/ Jacob Mattingley] ([jacobm@stanford.edu])
 
