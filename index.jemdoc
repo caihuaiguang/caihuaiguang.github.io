@@ -4,46 +4,45 @@
 ~~~
 {}{img_left}{pictures/chg.jpg}{alt text}{120}{150}{https://github.com/chg-chg/chg-chg.github.io/tree/main/pictures/chg.jpg}
 Master student(From Fall 2022),\n
-[http://english.ia.cas.cn/ Institute of Automation Chinese Academy of Sciences], \n\n  
+[http://english.ia.cas.cn/ Institute of Automation Chinese Academy of Sciences(CASIA)], \n
+[https://english.ucas.ac.cn/  University of Chinese Academy of Sciences(UCAS)]  , \n
 E-mail: caihuaiguang@gmail.com \n\n
 [https://github.com/chg-chg \[Github\]] [https://github.com/chg-chg \[Github\]]\n
 ~~~
 
-= jemdoc -- light markup
-[http://stanford.edu/~jacobm/ Jacob Mattingley] ([jacobm@stanford.edu])
 
-jemdoc is a light text-based markup language designed for creating 
-websites. It takes a text file written with [example.html jemdoc markup], an
-optional configuration file and an optional menu file, and makes static websites
-that look something like this one, [http://cvxmod.net/ that one] or
-[http://www.stanford.edu/class/ee364a/ another one].
 
-jemdoc was inspired by [http://www.methods.co.nz/asciidoc/ AsciiDoc], which is a
-text document format. AsciiDoc is great, and lots of the ideas from AsciiDoc are
-copied in jemdoc. The main differences are that jemdoc is simpler (you could say
-deliberately feature poor) and has more consistent syntax.
+== About Me
 
-[download.html Download jemdoc.]
+I am a master student majored in Pattern Recognition and Intelligent System in [http://english.ia.cas.cn/ Institute of Automation Chinese Academy of Sciences(CASIA)], [https://english.ucas.ac.cn/  University of Chinese Academy of Sciences(UCAS)], advised by [https://people.ucas.ac.cn/~wenshengzhang Prof. Wensheng Zhang].
 
-~~~
-Version +0.7.3+ was released on 2012-11-27 with some small bug fixes.
-See the [revision.html release notes].
-~~~
+I received my bachelor degree in Computer Science from [https://cse.sysu.edu.cn/  School of Computer Science and Engineering], [https://www.sysu.edu.cn/ Sun Yat-Sen (Zhongshan) University], advised by [https://cse.sysu.edu.cn/content/5429 Prof. Zhi Zhou] and [https://cse.sysu.edu.cn/content/2465 Prof. Chang-Dong Wang].
 
-[https://github.com/jem/jemdoc Contribute to jemdoc on github.]
+== Education
 
-== Goals
-- Simple, consistent syntax.
-- $\mbox{\LaTeX}$ [latex.html equation support].
-- [tables.html Table support].
-- Portability. The (single) jemdoc [http://www.python.org/ Python] file \+
-  single css file \+ your input file {{&rarr;}} html.
-- Based on [http://www.w3.org/Style/CSS/ CSS] so formatting specifics are
-  independent of jemdoc.
-- Production of clean,
-  [http://validator.w3.org/check/referer
-  standards-compliant] [http://www.w3.org/TR/xhtml11/ XHTML 1.1].
-- Minimal bells and whistles, but simple fallback to raw html if required.
+*B.S. degree, Sun Yat-Sen (Zhongshan) University*
+
+== Research Interests
+My research aims to design algorithms with a provable guarantee and to develop general mathematical tools for their performance analysis.I'm also interested in methods with elegent mathematical modeling.
+- Algorithms (Online Algorithms , Approximation Algorithms, Algorithmic Game Theory)
+- Machine Learning (Learning Theory, Online Learning, Edge computing, Graph Neural Network, Recommendation)
+
+# == Selected Awards 
+# == Publications 
+
+# ~~~
+# {}{img_left}{figures/paper_tips.png}{}{200}{100}{}
+# *Canhui Chen*, Xu Chen, Zhixuan Fang, "TIPS: Transaction Inclusion Protocol with Signaling in DAG-Based Blockchain," IEEE Journal on Selected Areas in Communications (JSAC). 2022.
+# \n
+# \[[./papers/tips_DAG.pdf PDF]\] \[[./slides/slides_tips.pdf slides]\]
+# ~~~
+ 
+# == Professional Activities
+
+# - *Technical Reviewer* 
+# -- IEEE Journal on Selected Areas in Communications (JSAC)  
+# - *Teaching Assistant* 
+# -- Game Theory, Institute for Interdisciplinary Information Sciences(IIIS), Tsinghua
 
 == License
 Copyright \C 2007--2012 Jacob Mattingley.
@@ -51,7 +50,7 @@ Copyright \C 2007--2012 Jacob Mattingley.
 jemdoc is free software; you can redistribute it and\/or modify it under the
 terms of the [http://www.gnu.org/licenses/gpl-3.0.html GNU General Public
 License] as published by the Free Software Foundation; either version 3 of the
-License, or (at your option) any later version.
+License, or (at your option) any latZer version.
 
 jemdoc is distributed in the hope that it will be useful, but WITHOUT ANY
 WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
