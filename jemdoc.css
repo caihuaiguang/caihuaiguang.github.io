@@ -39,8 +39,9 @@ body {
 	background: white;
 	text-align: left;
 	vertical-align: top;
-	min-width: 800px;
-	width: 800px;
+	/* min-width: 800px;
+	width: 800px; */
+	/* remove the last two line, we will  get a full page insteal of a partial one */
 }
 
 #layout-menu a {
