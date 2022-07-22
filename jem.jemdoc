@@ -80,8 +80,6 @@ The following is an example:
 For inline equations like $Ax+b$, simply use + \$Ax\+b\$ +. To reference an equation $\eqref{eq:E}$, use +\$\\++eqref{eq:E}\$+.
 
 
-
-
 == Cheatsheet
 
 See [https://ml.cs.tsinghua.edu.cn/~wenbo/jemdoc.html here].
