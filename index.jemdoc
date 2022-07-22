@@ -1,16 +1,12 @@
 # jemdoc: menu{MENU}{index.html}, showsource 
-==Huaiguang Cai 
+==Huaiguang Cai (蔡怀广)
 
 ~~~
-{}{img_left}{pictures/chg.jpg}{alt text}{160}{200}{}
-PhD,\n
-College of Computer, \n
-[https://english.nudt.edu.cn/ National University of Defense Technology (NUDT)], \n
-Deya Road, Kaifu District, \n
-Changsha City, Hunan Province, P.R. China. \n
-Phone: +86 XXX-XXXX-XXXX \n
-E-mail: XXX@nudt.edu.com \n
-Github Page: [http://y-boy.github.io y-boy.github.io] \n
+{}{img_left}{pictures/chg.jpg}{alt text}{120}{150}{https://github.com/chg-chg/chg-chg.github.io/tree/main/pictures/chg.jpg}
+Master student(From Fall 2022),\n
+[http://english.ia.cas.cn/ Institute of Automation Chinese Academy of Sciences], \n\n  
+E-mail: caihuaiguang@gmail.com \n\n
+[https://github.com/chg-chg \[Github\]] [https://github.com/chg-chg \[Github\]]\n
 ~~~
 
 = jemdoc -- light markup

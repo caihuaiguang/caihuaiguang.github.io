@@ -1,4 +1,4 @@
-python jemdoc index.jemdoc
-python jemdoc link.jemdoc 
-python jemdoc mathjax.jemdoc 
-python jemdoc underscore.jemdoc  
+python jemdoc.py index.jemdoc
+python jemdoc.py link.jemdoc 
+python jemdoc.py mathjax.jemdoc 
+python jemdoc.py underscore.jemdoc  
