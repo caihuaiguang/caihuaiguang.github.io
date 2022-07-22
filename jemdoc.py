@@ -30,8 +30,8 @@ import time
 import io
 from subprocess import *
 from types import *
-import tempfile
-
+import tempfile  
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='utf8') #改变标准输出的默认编码
 def info():
   print(__doc__)
   print('Platform: ' + sys.platform + '.')
@@ -469,7 +469,7 @@ def doincludes(f, l):
   i = 'include{'
   l = l.rstrip()
   if l.startswith(ir):
-    nf = io.open(l[len(ir):-1], 'rb')
+    nf = io.open(l[len(ir):-1], 'rb',encoding='utf-8')
     f.outf.write(nf.read().decode('utf-8'))
     nf.close()
   elif l.startswith(i):
