@@ -1,4 +1,4 @@
-# jemdoc: menu{MENU}{mathjax.html}, nofooter
+# jemdoc: menu{MENU}{mathjax.html}
 == MathJax Example
 
 In this modified version of +jemdoc+, a LaTeX equation block can be typed in as

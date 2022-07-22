@@ -1,13 +1,13 @@
-# jemdoc: menu{MENU}{jem.html}, nofooter
+# jemdoc: menu{MENU}{jem.html}
 = Quick tutorial of Jemdoc
-*Attention*: This page is copied from [https://github.com/CharlesZJCHEN/charleszjchen.github.io/blob/main/jem.jemdoc Zijian Chen's homepage].
+*Attention*: This page is copied from [https://github.com/CharlesZJCHEN/charleszjchen.github.io/blob/main/jem.jemdoc Zijian Chen's homepage].\n\n
 These static pages are generated using Jemdoc, which is originally developed by [https://jemnz.com Jacob Mattingley]. Source code (through Github) can be accessed [https://github.com/jem/jemdoc here], or you can just make modifications on [https://github.com/CharlesZJCHEN/charleszjchen.github.io my version]. Now it also supports MathJax! See [https://www.mit.edu/~wsshin/jemdoc+mathjax.html this page] or the [https://github.com/wsshin/jemdoc_mathjax GitHub repo].
 
 == Steps to generate a new HTML page
 
 === regular pages
 
-0. Say, your folder is +\\User\\xxx\\myJem+
+0. Say, your folder is +\/User\/xxx\/myJem+
 
 1. Create a +xxx.jemdoc+ file (by TextEdit or something). This should include:
 
