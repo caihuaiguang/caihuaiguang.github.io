@@ -1,15 +1,14 @@
 Cai huaiguang			
 	Home				[index.html] 
 	Link				[link.html] 
+	Blog				[\Blog/blog.html]
 Research
-	Machine Learning	[mathjax.html] 
+	Machine Learning	[mathjax.html]  
 	Online Algorithm	[mathjax.html]
 	Graph Neural Network[link.html] 
 	Pattern Recognition [link.html] 
-Blog
-	MathJax				[mathjax.html]  
 Using jemdoc
-	WWW					[\www/index.html]
+	WWW					[\www/www.html]
 	Jemdoc				[jem.html]
 	Open in New Tab		[\http://www.google.com]
 
