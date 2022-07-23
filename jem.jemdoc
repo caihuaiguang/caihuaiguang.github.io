@@ -82,7 +82,16 @@ For inline equations like $Ax+b$, simply use + \$Ax\+b\$ +. To reference an equa
 
 == Cheatsheet
 
+
 See [https://ml.cs.tsinghua.edu.cn/~wenbo/jemdoc.html here].
+
+== Underscore Example
+
+Like *bold* and /italic/, _underscore_ can be used for emphasis in this modified version of +jemdoc+.  Useful for highlighting different parts of a bibliography item as:
+
+1. _First Author_, Second Author, and *Corresponding Author*, "Amazing Paper," /High-impact Journal/, vol.~1, pp.~1--10 (2014).
+
+
 == jemdoc+MathJax in Action 
 Here are a few websites found on Google that show the actual usage of jemdoc+MathJax:
 - [https://magickd.github.io/ Canhui Chen (陈灿辉)]
