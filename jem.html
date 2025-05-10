@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Quick tutorial of Jemdoc</title>
+<style type="text/css">
+.abs {
+ background-color: #eefaff;
+ color: #202020;
+ max-width: auto;
+ border: 1px solid #dddddd;
+ padding: 7px;
+ display: none;
+}F
+li{
+    margin-top: 10px;
+}
+li:first-child {
+    margin-top:0;
+}
+</style>
+<script type="text/javascript">
+function showAbstract(e){
+   var div;
+   for(div = e.nextSibling; div.className != "abs"; div = div.nextSibling);
+   if (div.style.display=="block"){
+     div.style.display="";
+   } else {
+     div.style.display="block";
+   }
+   return true;
+}
+</script>
+<script>
+	function toggle(pId) {
+	var e=document.getElementById(pId);
+	if (!e) return;
+	if (e.style.display == "none") {
+		e.style.display = "block"
+	} else {
+		e.style.display = "none"
+	}
+	return;
+	}
+</script>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+<link rel="icon" type="image/x-icon" href="./pictures/monster-icons/ICO/kidaha-02.ico" >
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Huaiguang Cai</div>
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-item"><a href="Link.html">Link</a></div>
+<div class="menu-category">Idea</div>
+<div class="menu-item"><a href="GT.html">Game&nbsp;Theory</a></div>
+<div class="menu-item"><a href="OD.html">Online&nbsp;Decision</a></div>
+<div class="menu-item"><a href="LLM_RL.html">LLM&nbsp;and&nbsp;RL</a></div>
+<div class="menu-category">Record</div>
+<div class="menu-item"><a href="Paper_Daily.html">Paper&nbsp;Daily</a></div>
+<div class="menu-item"><a href="Summary.html">Summary</a></div>
+<div class="menu-item"><a href="Talk.html">Talk</a></div>
+<div class="menu-category">Material</div>
+<div class="menu-item"><a href="Linux.html">Linux</a></div>
+<div class="menu-item"><a href="English.html">English</a></div>
+<div class="menu-item"><a href="Math.html">Math</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Quick tutorial of Jemdoc</h1>
+<div id="subtitle"><b>Attention</b>: This page is modified from <a href="https://github.com/CharlesZJCHEN/charleszjchen.github.io/blob/main/jem.jemdoc" target=&ldquo;blank&rdquo;>Zijian Chen's homepage</a>.<br /><br />
+These static pages are generated using Jemdoc, which is originally developed by <a href="https://jemnz.com" target=&ldquo;blank&rdquo;>Jacob Mattingley</a>. Source code (through Github) can be accessed <a href="https://github.com/jem/jemdoc" target=&ldquo;blank&rdquo;>here</a>, or you can just make modifications on <a href="https://github.com/CharlesZJCHEN/charleszjchen.github.io" target=&ldquo;blank&rdquo;>my version</a>. Now it also supports MathJax! See <a href="https://www.mit.edu/~wsshin/jemdoc+mathjax.html" target=&ldquo;blank&rdquo;>this page</a> or the <a href="https://github.com/wsshin/jemdoc_mathjax" target=&ldquo;blank&rdquo;>GitHub repo</a>.
+</div>
+</div>
+<h2>Steps to generate a new HTML page</h2>
+<h3>regular pages</h3>
+<p>0. Say, your folder is <tt>/User/xxx/myJem</tt>
+</p>
+<p>1. Create a <tt>xxx.jemdoc</tt> file (by TextEdit or something). This should include:
+</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+# jemdoc: menu{MENU}{xxx.html}
+= Your section title
+</pre></div></div>
+<p>2. Use <tt>Terminal</tt> (or <tt>cmd</tt> in Windows) to generate HTML file
+</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+cd \User\xxx\myJem
+python2 jemdoc.py xxx
+</pre></div></div>
+<h3>Menu</h3>
+<p>Create a file named <tt>MENU</tt> WITHOUT any extension name, and put the following (say)
+</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+Home
+    About me           [index.html]
+    What's new		 [new.html]
+</pre></div></div>
+<p>Then use <tt>Terminal</tt> 
+</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+cd \User\xxx\myJem
+python2 jemdoc.py MENU
+</pre></div></div>
+<p>Remember to re-generate all other pages after you update the menu.
+</p>
+<h3>Pages with MathJax</h3>
+<p>You first need to download <a href="jemdoc3.py" target=&ldquo;blank&rdquo;>jemdoc3.py</a> and <a href="mysite.conf" target=&ldquo;blank&rdquo;>mysite.conf</a>. Steps to generate a page with equations are more or less the same, except that you need to use
+</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+python2 jemdoc3.py -c mysite.conf xxx
+</pre></div></div>
+<p>In this case, python 3 also works!
+</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+python3 jemdoc3.py -c mysite.conf xxx
+</pre></div></div>
+<p>The following is an example:
+</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+\(
+\begin{align}
+\nabla \cdot \mathbf{D} &amp;= \rho_f\label{eq:D}\\
+\nabla \cdot \mathbf{B} &amp;= 0\label{eq:B}\\
+\nabla \times \mathbf{E} &amp;= -\frac{\partial\mathbf{B}}{\partial t}\label{eq:E}\\
+\nabla \times \mathbf{H} &amp;= \mathbf{J}_f - \frac{\partial\mathbf{D}}{\partial t}\label{eq:H}
+\end{align}
+\)
+</pre></div></div>
+<p style="text-align:center">
+\[
+\begin{align}
+\nabla \cdot \mathbf{D} &amp;= \rho_f\label{eq:D}\\
+\nabla \cdot \mathbf{B} &amp;= 0\label{eq:B}\\
+\nabla \times \mathbf{E} &amp;= -\frac{\partial\mathbf{B}}{\partial t}\label{eq:E}\\
+\nabla \times \mathbf{H} &amp;= \mathbf{J}_f - \frac{\partial\mathbf{D}}{\partial t}\label{eq:H}
+\end{align}
+\]
+</p><p>For inline equations like \(Ax+b\), simply use <tt> $Ax+b$ </tt>. To reference an equation \(\eqref{eq:E}\), use <tt>$\</tt><tt>eqref{eq:E}$</tt>.
+</p>
+<h2>Cheatsheet</h2>
+<p>See <a href="https://ml.cs.tsinghua.edu.cn/~wenbo/jemdoc.html" target=&ldquo;blank&rdquo;>here</a>.
+</p>
+<h2>Underscore Example</h2>
+<p>Like <b>bold</b> and <i>italic</i>, <u>underscore</u> can be used for emphasis in this modified version of <tt>jemdoc</tt>.  Useful for highlighting different parts of a bibliography item as:
+</p>
+<p>1. <u>First Author</u>, Second Author, and <b>Corresponding Author</b>, &ldquo;Amazing Paper,&rdquo; <i>High-impact Journal</i>, vol.&nbsp;1, pp.&nbsp;1&ndash;10 (2014).
+</p>
+<h2>jemdoc+MathJax in Action </h2>
+<p>Here are a few examples using jemdoc+MathJax:
+</p>
+<ul>
+<li><p><a href="https://magickd.github.io/" target=&ldquo;blank&rdquo;>Canhui Chen (陈灿辉)</a>
+</p>
+</li>
+<li><p><a href="http://people.iiis.tsinghua.edu.cn/~huang/index.html" target=&ldquo;blank&rdquo;>Longbo Huang (黄隆波)</a>
+</p>
+</li>
+<li><p><a href="https://ling-pan.github.io/" target=&ldquo;blank&rdquo;>Ling Pan (潘玲)</a>
+</p>
+</li>
+<li><p><a href="https://www.cse.msu.edu/~tangjili/index.html" target=&ldquo;blank&rdquo;>Jiliang Tang (汤继良)</a>
+</p>
+</li>
+<li><p><a href="https://bicmr.pku.edu.cn/~wenzw/index.html" target=&ldquo;blank&rdquo;>Zaiwen Wen (文再文)</a>
+</p>
+</li>
+<li><p><a href="https://www.mhchen.com/advice.html" target=&ldquo;blank&rdquo;>Minghua Chen</a>
+</p>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</body>
+</html>

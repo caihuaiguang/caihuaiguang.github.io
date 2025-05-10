@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Large Language Model and Reinforcement Learning</title>
+<style type="text/css">
+.abs {
+ background-color: #eefaff;
+ color: #202020;
+ max-width: auto;
+ border: 1px solid #dddddd;
+ padding: 7px;
+ display: none;
+}F
+li{
+    margin-top: 10px;
+}
+li:first-child {
+    margin-top:0;
+}
+</style>
+<script type="text/javascript">
+function showAbstract(e){
+   var div;
+   for(div = e.nextSibling; div.className != "abs"; div = div.nextSibling);
+   if (div.style.display=="block"){
+     div.style.display="";
+   } else {
+     div.style.display="block";
+   }
+   return true;
+}
+</script>
+<script>
+	function toggle(pId) {
+	var e=document.getElementById(pId);
+	if (!e) return;
+	if (e.style.display == "none") {
+		e.style.display = "block"
+	} else {
+		e.style.display = "none"
+	}
+	return;
+	}
+</script>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+<link rel="icon" type="image/x-icon" href="./pictures/monster-icons/ICO/kidaha-02.ico" >
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Huaiguang Cai</div>
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-item"><a href="Link.html">Link</a></div>
+<div class="menu-category">Idea</div>
+<div class="menu-item"><a href="GT.html">Game&nbsp;Theory</a></div>
+<div class="menu-item"><a href="OD.html">Online&nbsp;Decision</a></div>
+<div class="menu-item"><a href="LLM_RL.html" class="current">LLM&nbsp;and&nbsp;RL</a></div>
+<div class="menu-category">Record</div>
+<div class="menu-item"><a href="Paper_Daily.html">Paper&nbsp;Daily</a></div>
+<div class="menu-item"><a href="Summary.html">Summary</a></div>
+<div class="menu-item"><a href="Talk.html">Talk</a></div>
+<div class="menu-category">Material</div>
+<div class="menu-item"><a href="Linux.html">Linux</a></div>
+<div class="menu-item"><a href="English.html">English</a></div>
+<div class="menu-item"><a href="Math.html">Math</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Large Language Model and Reinforcement Learning</h1>
+</div>
+<h2>Enhanced Reasoning</h2>
+<ul>
+<li><p>当模型不自信时中断自回归过程，插入wait，but之类的词语。一方面不需要训练即可提升模型推理能力（因为token量更多了，test time compute），另一方面造出了有反思过程的SFT数据。
+</p>
+</li>
+<li><p><a href="https://arxiv.org/abs/2501.19393" target=&ldquo;blank&rdquo;>s1: Simple test-time scaling</a>，当模型要停止输出时加入wait，验证了越多的token通常带来越好的推理性能。
+</p>
+</li>
+<li><p>不自信的判断可以基于Perplexity来确定，这篇文章提出的基于PPL的IFD分数衡量了指令对生成对应响应的帮助程度：<a href="https://arxiv.org/abs/2402.00530" target=&ldquo;blank&rdquo;>Superfiltering: Weak-to-Strong Data Filtering for Fast Instruction-Tuning</a>
+</p>
+</li>
+<li><p>推理增强技术和训练相辅相成，只要存在推理增强的方法，那么训练就能通过SFT或者RL这些数据获得提升。实际上就是将推理增强的这种可能是无法微分的方式训进模型中。
+推理增强的技术有：思维链（或者说In Context Learning）、Best of N、上面的修改自回归的方法（s1）；因此模型的最终形态就是用很长的思维链（性能受限且受益于长文）、稳定输出最优解（<a href="https://arxiv.org/abs/2304.06767" target=&ldquo;blank&rdquo;>RAFT</a>）、善于反思的然后超级自信的模型。
+</p>
+</li>
+<li><p>Self-Play for LLM：用RL同时训reward model 和 policy model。甚至进一步，一个模型同时当reward model和policy model。思维链内部就有很多次尝试且自己就是个reward model（性能受限且受益于自博弈）。可能的好处：
+1. 给大模型加了个元认知：知道自己对不对，因此可能有助于减少幻觉。
+2. 提高数据利用率。policy model的单条回复重新当做reward model的输入。
+3. 更快反思、更小模型上反思的policy model。因为训练方式也可看作是蒸馏反思Prompt的过程。
+4. 更好的reward model。reward model训练数据和policy model同源。
+</p>
+</li>
+</ul>
+<h2>Efficient Training</h2>
+<ul>
+<li><p>层间主参数共享，层与层之间差异仅在lora矩阵。参考资料 <a href="https://arxiv.org/abs/2501.18596" target=&ldquo;blank&rdquo;>DeltaLLM: Compress LLMs with Low-Rank Deltas between Shared Weights</a>，
+<a href="https://arxiv.org/abs/1909.11942" target=&ldquo;blank&rdquo;>ALBERT: A Lite BERT for Self-supervised Learning of Language Representations</a>.
+</p>
+</li>
+</ul>
+<h2>Long Context and Reasoning</h2>
+<ul>
+<li><p>长文（Long Context）和推理能力（Long CoT）的共同底层特性都是长距离依赖能力，因此训了一个另一个也能提升。能不能类似于self play的做法，迭代式推进模型长文和推理能力呢？
+</p>
+</li>
+</ul>
+<h2>Reinforcement Learning</h2>
+<ul>
+<li><p>PPO based DPO，reward应该有着clip操作。
+</p>
+</li>
+<li><p>将SFT加三盲一致能不能等价于一种新的RL算法或者reward计算方式？是不是一条和数学RL不同的路线？是的，类似于<a href="https://arxiv.org/abs/2304.06767" target=&ldquo;blank&rdquo;>RAFT</a>。
+</p>
+</li>
+<li><p>测试时强化学习：同个query，那些think给answer带来的概率增大的数据更有价值，利用价值当做reward来训模型。这便是一条和数学这种有标答的RL不同的路线。
+</p>
+</li>
+<li><p>通过设计奖励函数激励模型说真话。将拍卖机制引入强化学习。
+</p>
+</li>
+<li><p>SFT有没有clip操作？得到类似loss加权的东西？
+</p>
+</li>
+</ul>
+<h2>Reinforcement Learning materials</h2>
+<ul>
+<li><p>CS285,Sergey Levine,UC Berkeley, 《Deep Reinforcement Learning, Decision Making, and Control》
+</p>
+</li>
+<li><p><a href="https://deepreinforcementlearningbook.org/" target=&ldquo;blank&rdquo;>Deep Reinforcement Learning: Fundamentals, Research and Applications</a>
+</p>
+</li>
+<li><p><a href="https://rltheorybook.github.io/" target=&ldquo;blank&rdquo;>Reinforcement Learning: Theory and Algorithms</a>
+</p>
+</li>
+<li><p><a href="http://nanjiang.cs.illinois.edu/cs542f22/" target=&ldquo;blank&rdquo;>CS 542 Statistical Reinforcement Learning (F22)</a>
+</p>
+</li>
+</ul>
+<h2>System</h2>
+<ul>
+<li><p><a href="https://openmlsys.github.io/" target=&ldquo;blank&rdquo;>机器学习系统：设计和实现</a>
+</p>
+</li>
+<li><p><a href="https://zsdonghao.github.io/" target=&ldquo;blank&rdquo;>Hao Dong(董豪)</a> 
+</p>
+</li>
+<li><p><a href="https://chhzh123.github.io/summary/distributed-systems/" target=&ldquo;blank&rdquo;>分布式系统的课程笔记</a>
+</p>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</body>
+</html>

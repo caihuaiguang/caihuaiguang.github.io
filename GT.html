@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Game Theory  </title>
+<style type="text/css">
+.abs {
+ background-color: #eefaff;
+ color: #202020;
+ max-width: auto;
+ border: 1px solid #dddddd;
+ padding: 7px;
+ display: none;
+}F
+li{
+    margin-top: 10px;
+}
+li:first-child {
+    margin-top:0;
+}
+</style>
+<script type="text/javascript">
+function showAbstract(e){
+   var div;
+   for(div = e.nextSibling; div.className != "abs"; div = div.nextSibling);
+   if (div.style.display=="block"){
+     div.style.display="";
+   } else {
+     div.style.display="block";
+   }
+   return true;
+}
+</script>
+<script>
+	function toggle(pId) {
+	var e=document.getElementById(pId);
+	if (!e) return;
+	if (e.style.display == "none") {
+		e.style.display = "block"
+	} else {
+		e.style.display = "none"
+	}
+	return;
+	}
+</script>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+<link rel="icon" type="image/x-icon" href="./pictures/monster-icons/ICO/kidaha-02.ico" >
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Huaiguang Cai</div>
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-item"><a href="Link.html">Link</a></div>
+<div class="menu-category">Idea</div>
+<div class="menu-item"><a href="GT.html" class="current">Game&nbsp;Theory</a></div>
+<div class="menu-item"><a href="OD.html">Online&nbsp;Decision</a></div>
+<div class="menu-item"><a href="LLM_RL.html">LLM&nbsp;and&nbsp;RL</a></div>
+<div class="menu-category">Record</div>
+<div class="menu-item"><a href="Paper_Daily.html">Paper&nbsp;Daily</a></div>
+<div class="menu-item"><a href="Summary.html">Summary</a></div>
+<div class="menu-item"><a href="Talk.html">Talk</a></div>
+<div class="menu-category">Material</div>
+<div class="menu-item"><a href="Linux.html">Linux</a></div>
+<div class="menu-item"><a href="English.html">English</a></div>
+<div class="menu-item"><a href="Math.html">Math</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Game Theory  </h1>
+</div>
+<h2>机制设计</h2>
+<ul>
+<li><p>以是否引入价格机制为区分，市场设计理论主要包括拍卖理论与匹配理论。
+</p>
+</li>
+<li><p>大型拍卖中，有些是使用基于深度学习的出价，有些是人工最大化利润的出价；因此一场拍卖中可能会出现人和人的博弈以及人和AI的博弈以及AI和AI的博弈，是个很好的研究场景。
+</p>
+</li>
+<li><p>广告就是平台向人群传递信息，这种信息的主动传递有可能带来人群观点的极化或者一致。
+</p>
+</li>
+<li><p>信息流广告：个性化推荐用于广告，做到精准推荐、不断刷新、且没有展示位的限制。这是因为广告一方面是可以为用户带来信息价值的，另一方面此时个性化的广告不会影响用户体验。
+</p>
+</li>
+<li><p>传统推荐：以用户为中心；传统广告：从产品出发。包括拍卖在内的机制设计，考虑的都是一个已经存在的物品如何卖给参与者。但其实可以不局限卖物品，还可以卖人！这就是种草广告。可能未来还会出现，以用户为中心，定制广告，这样广告、推荐、生成式AI会结合得更加紧密。
+</p>
+</li>
+<li><p>品牌广告收入是TikTok的大头。广告主并不关心短期内投放广告挣了多少钱，而是关心品牌的影响力、追求的是长期效益。另外，因为广告主的投放方式是给一笔预算给平台，让平台帮忙花出去来提高品牌长期影响力，因此此时的广告主优化目标就不是利润最大化了（传统拍卖追求的），而是价值最大化。
+价值最大化的意思就是我有一笔钱，我希望能买到最好的东西，我不在乎买了后我还剩多少。二价拍卖在买家利润最大化的时候是激励相容的（广告主说真话会带来最高收益），广义二价拍卖在买家价值最大化的时候是激励相容的。因此广义二价拍卖（GSP）广泛使用是有一定合理性的。
+</p>
+</li>
+<li><p>业界和学术界对于机制设计有着非常大的思维上的区别。主要体现在学术界追求算法或者机制的理论性（竞争比、无政府代价、均衡可计算性、算法复杂度、是否最优），但是业界追求可解释性（比如GSP就是方便向广告主解释，提出方案同行审批的时候要说明理论上获得的收益是出自哪个地方），
+简单性（比如广告主何时出价、出价高低的pacing问题，实际上是一个在线算法问题（在线体现在不知道未来广告位贵还是便宜）。学界的做法primal-dual找到同步更新原变量和对偶变量的方式然后求竞争比，但业界求了对偶问题后，就拿PID来控制对偶变量进而调控出价，让其符合流量图。算法的关键是能用，易推广，易扩展），
+维护广告主利益（广告投放不到量就赔付，紧急情况下手动满足广告主要求；但广告投放超量也不能多收广告主的钱），强烈启发式（各种hidden cost、出价按照前天的流量图、总之注意到哪儿有优化的点就上个算法试试效果）。
+</p>
+</li>
+<li><p>抖音广告平台在实践中发现，大规模的基于PID算法的广告出价快速且容易达到均衡，但背后的均衡原理和速率应该还不清楚。
+</p>
+</li>
+<li><p><a href="https://github.com/wnzhang/rtb-papers" target=&ldquo;blank&rdquo;>Paper Collection of Real-Time Bidding</a>
+</p>
+</li>
+<li><p>LLM for Ads：广告领域的scaling law可以从广告素材的角度来考虑：1. 对于现有广告素材，如何增加ctr？那就要拿更好的模型来对用户和广告素材进行理解。用户方面，可以将用户的行为数据（点击、下单、购买）用于大模型预训练，相当于加了更多不一样的数据（用户行为模态），模型性能会更好，这算广告预训练大模型中独特的scaling law；广告素材方面，直接用多模态理解大模型即可。
+2. 产生新的广告素材，这个基本是生成式AI和种草广告结合，可以为品牌方定制广告，也可以为用户定制广告。预期效果是不会引起用户反感（毕竟生成了用户感兴趣的内容），又能增加广告收入。
+</p>
+</li>
+</ul>
+<h2>快速求解均衡</h2>
+<ul>
+<li><p>博弈论永恒的研究问题：如何更快地求解均衡，特别是last-iterate意义上的均衡。
+</p>
+</li>
+<li><p>不完美信息博弈是之前动作看不到（德州扑克），不完全信息是对方收益矩阵不知道。石头剪刀布就是完全信息但不完美信息博弈，可以用CFR算法求解均衡。
+</p>
+</li>
+<li><p>异步regret：一个经常被博弈论和在线优化研究者忽略的现实是，虽说经典的理论结果的默认前提所有人同时做动作（博弈论）或者人和环境同时做决策（在线优化），但是快速求解德州扑克这种不完全信息博弈的CFR算法，是采用了异步的技巧进行加速求解均衡的：
+玩家在看到了对方做的动作后进行决策，regret的计算也和理论建模中的不一样了，详见<a href="https://www.mit.edu/~gfarina/6S890_f23/lecture14.pdf" target=&ldquo;blank&rdquo;>gfarina-lecture14.pdf</a>。
+</p>
+</li>
+<li><p>合作求解非合作博弈均衡：沙盘推演的目的是找到两人非合作博弈的均衡（用作两人竞争性博弈时的最佳策略），但这不一定意味着沙盘推演的时候两者完全是对立的，完全合作也是合理的：两方的算法合作形成了快速找到均衡的算法。
+</p>
+</li>
+<li><p>伪均衡：比如经济市场可能根本就没达到均衡，只是有些个体被卡住的行为被我们观察到了；找到Nash均衡是PPAD完全复杂度的，但找到某个主要个体（比如大公司）是不是难度就没那么大了呢？不是说local equilibrium，
+是说其他个体动态变化根本就没有达到均衡，但是主要个体却动不了了。
+</p>
+</li>
+</ul>
+<h2>博弈论和在线优化的等价性（被解决了大半）</h2>
+<ul>
+<li><p><a href="https://simons.berkeley.edu/programs/games2022/workshops#simons-tabs" target=&ldquo;blank&rdquo;>Learning and Games (Simons Institute for the Theory of Computing)</a>
+</p>
+</li>
+<li><p>考虑优化和博弈的对应，我们现在已经几乎建立起了时序上信息不完全的决策方法（在线优化）和空间上信息不完全（个体不能完全清楚别人的想法）的决策方法（博弈论）的关系，
+理论上来说一种优化方法应该能对应一种博弈方法，这里应该有一个的理论统一在线优化和博弈论，《General Class of No-Regret Learning Algorithms and Game-Theoretic Equilibria》基本解决了这个问题。
+</p>
+</li>
+<li><p>研究在线优化和差分隐私的关系（colt 2022的open problem），可以考虑从机器学习理论中的VC维或者Littlestone维出发逆推理论。也有可能统一差分隐私、game theory和online learning。
+</p>
+</li>
+<li><p>针对两人零和博弈hedge得到冯诺依曼极小极大值定理的证明过程，考虑单个个体的决策方法实际上是多个个体的单次决策的平均得到的，证明方法是从原本的证明换一个次线性项然后反过来推假设。
+</p>
+</li>
+<li><p>NE是个点，CE是个凸区间，CCE是个更大的凸区间。
+</p>
+</li>
+<li><p>决策的基础是信息。Li Ming研究的Kolmogorov complexity说是可以分析序列的信息（online learning的设置）、分析对象的信息（game theory的设置），且和输入无关，来得到算法平均复杂度。
+</p>
+</li>
+<li><p>《No-Regret Learning in Convex Games》将5种regret和5种均衡对应起来了。但还有berge equilibrium没有覆盖到，矩阵式博弈只解决了convex的情形。
+</p>
+</li>
+<li><p>在线优化只是求解均衡的一种方式。一个有意思的例子是石头剪刀布两个人都轮流出三种中的一种（一个出的顺序是石头剪刀布，另一个是剪刀布石头），然后平均意义上达到纳什均衡但是第一个人一直赢。这种策略从在线优化的角度来说regret是线性的，但是也可以平均意义上得到均衡。
+</p>
+</li>
+</ul>
+<h2>博弈视角下的时空大一统</h2>
+<ul>
+<li><p>宗成庆老师说过自然语言有一个很经典的结论是时间拉长来看一个人所说的语言的分布，和瞬间给所有人正在说的话截屏得到的结果差不多。这叫随机过程中的遍历性。
+原文如下（第二个PPT）：随机过程的遍历性(ergodic)：对于一个平稳的随机变量X，如果它的所有样本函数在某一固定时刻的统计特性和单一样本函数在长时间内的统计特性一致，我们则称X为各态遍历，即随机变量单一样本函数随时间变化的过程可以包括该变量所有样本函数的取值经历。隐藏含义是：如果一个随机变量是遍历性的，那么该随机变量的时间统计特性等于其空间统计信息。
+</p>
+</li>
+<li><p><a href="https://en.wikipedia.org/wiki/Ergodic_theory" target=&ldquo;blank&rdquo;>Ergodic_theory</a> 
+</p>
+</li>
+<li><p><a href="https://zh.wikipedia.org/zh-cn/%E9%9E%85_(%E6%A6%82%E7%8E%87%E8%AE%BA)" target=&ldquo;blank&rdquo;>鞅 (概率论)</a>
+</p>
+</li>
+<li><p>公平博弈：仅基于时点t的可用信息以期获得超过正常水平的收益是不可能的。
+</p>
+</li>
+<li><p>鞅的定义与信息是有关的；filtration，金融市场中的信息是逐步揭示的所以定义了这个东西；对于价格走势符合鞅过程的资产，我们站在任何时间点对于未来价格的预测都等于其现在的价格，即无任何趋势。
+</p>
+</li>
+<li><p>鞅论在《A General Class of No-Regret Learning Algorithms and Game-Theoretic Equilibria》证明Blackwell Approachability Theorem的推广中用到了。
+</p>
+</li>
+</ul>
+<h2>个体异质性与均衡结果</h2>
+<ul>
+<li><p>考虑个体差异性，假设不是所有个体采用在线优化或者采取的在线优化对应的Regret收敛速率不同呢？这里应该有一个均衡结果随着个体策略的异构性的变化结论（可能有相变），这样就能将所有均衡扯到一条线上，会是一个很重要的结果。
+</p>
+</li>
+<li><p>在hedge证明minmax theorem的过程中，是没有假定对方采取什么策略的，而是通过环境的反馈得到自己渐进最优的策略，
+这里可以引入中间件的思想：多个智能体看作是单个智能体和环境的博弈。对于某个智能体，给定环境下它达到了最优；但环境可能是由多个没达到最优的智能体混合达到了最坏情况。这可能可以解释经济市场为什么有些时候能看到均衡但实际上均衡很难计算出来。
+</p>
+</li>
+<li><p>可以定义一个自私程度的量来代表每个人的行为准则，所有人都最自私就对应着NE，没那么自私就CE、CCE，所有人都无私就berge equilibrium。这个自私的量（或者理性的程度）就是动机，接着我们可以从个体的动机对应到个体的策略，最后对应到整体的均衡。当然不同动机的初始分布就对应着不同的均衡结果。进一步，可以考虑类似 swap regret，就是如果是另一个玩家，他会怎么做，这里就完成了对不同玩家自私程度的刻画。
+</p>
+</li>
+<li><p>易中天说，“己所不欲，勿施于人”是消极的思想，是底线；“己欲立而立人，己欲达而达人”是积极的思想，是高标。孔子认为底线比高标重要；一个社会只要守住了道德的底线，他就是和谐社会。人人都能做到的东西才能够作为道德标准提出来。
+换到博弈论的研究中，道德底线类似于所有人采用no-regret算法即可，你当然可以收敛很快，但只要no-regret就行。“己所不欲，勿施于人”放到囚徒困境中，我不想出卖别人，别人也不要出卖我，就能达到好的那个纳什均衡点。
+</p>
+</li>
+<li><p>这些想法都可以通过思维实验来检验：0到100，每人任选一个数字，最接近平均数2/3的那个胜出。
+</p>
+</li>
+</ul>
+<h2>时序均衡</h2>
+<ul>
+<li><p>“当告知你未来会发生什么，那你还会这样做么？”，出自电影《降临》，感觉像是时序上的纳什均衡。
+</p>
+</li>
+<li><p>(Hindsight rationality, informal). The player has “learnt” to play the game when looking back at the history of play, they cannot think of any transformation \(\phi: X \to X\) of their strategies that
+when applied at the whole history of play would have given strictly better utility to the player. This is from <a href="https://www.mit.edu/\\~gfarina/6S890/lecture4.pdf" target=&ldquo;blank&rdquo;>MIT 6.S890 — Topics in Multiagent Learning (F23)</a>.
+这实际上很像regret了。如果我们能构造相同过程：神经网络给出的解是天启，来和当前决策做比较，就能定义“希望”类似的量（hope），这样所有的regret算法就也有对应版本的hope算法。听上去好像是MPC（先做后续10步决策，但只采用1步）。参考文献：<a href="https://proceedings.mlr.press/v139/agarwal21b/agarwal21b-supp.pdf" target=&ldquo;blank&rdquo;>A Regret Minimization Approach to Iterative Learning Control</a>, <a href="https://arxiv.org/pdf/1902.08967.pdf" target=&ldquo;blank&rdquo;>An Online Learning Approach to Model Predictive Control</a>
+</p>
+</li>
+</ul>
+<h2>Shapley Value</h2>
+<ul>
+<li><p>hedge算法也是一堆人做决策，能不能用shapley value来确定每个人权重呢？
+</p>
+</li>
+<li><p>线性规划中有个敏感性分析，就是一些系数的改变不太影响最优解之类的东西，是通过对偶做到的。显然这里就有个重要程度之类的的东西，shapley value结合线性规划看能不能和对偶产生联系。
+</p>
+</li>
+<li><p>shapley value和VCG机制都是关于个人对群体的影响，是不是这两个理论都有共同之处呢？
+</p>
+</li>
+<li><p><a href="https://www.zhihu.com/question/652427641" target=&ldquo;blank&rdquo;>如何评价2024年克拉克奖得主Philipp Strack对信息和行为经济学的贡献？</a>，信息影响决策（这个过程已经被Philipp Strack形式化好了），
+而人通常是通过多个信息来源做出最后决策的，这里如果能推导出这种情况下的Shpaly value解析式，那么将有助于定量确定每个信息的价值。
+</p>
+</li>
+<li><p>Shapley value用于训练好的模型进行生成式AI数据归因，版权保护。
+</p>
+</li>
+<li><p>Shapley value在考虑因素和环境存在互动时因素的贡献分配，其中环境不是一成不变的，会被因素影响。这个时候Shapley value还准么？
+</p>
+</li>
+<li><p>可解释指标。SHAP、LIME等方法可以对特征重要性进行排序，类似于推荐系统中给一个用户推荐感兴趣的物品的列表，其中用NDCG来描述推荐的指标，
+这里能不能给可解释性也定义类似的指标；或者从理论上去证明某种可解释方法是NDCG意义下最优的。
+</p>
+</li>
+<li><p>可解释性特征选择和神经网络形成两人博弈：可解释性算法根据神经网络的决策结果找到可解释性的特征，神经网络根据可解释性特征进行决策，则最优可解释性特征选择算法和最优神经网络构成一个纳什均衡。
+</p>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</body>
+</html>

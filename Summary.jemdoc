@@ -1,0 +1,28 @@
+# jemdoc: menu{MENU}{Summary.html},nofooter  
+== Summary
+好记性不如烂笔头
+
+== 2024年
+- [my_summary/LLM/OpenAI_o1_review.html OpenAI o1 review (in Chinese)]
+
+== 2023年
+- [my_summary/OL/GT_AI_Data.pdf Game Theory in Algorithms and Data (in Chinese)]
+- [my_summary/Art/Parthenon_introduction.pdf Parthenon Introduction (in Chinese)]
+- [my_summary/CV/CV_Algorithms_and_Applications.pdf Computer Vision Algorithms and Applications Notes (in Chinese)]
+- [my_summary/code/chg收集的模版.html cpp code pattern]
+
+
+== 2022年
+- [my_summary/OA/OA_introduction.pdf Online Algorithm Introduction (in Chinese)]
+- [my_summary/OR/Operation_Research.pdf Operation Research Introduction (in Chinese)]
+- [my_summary/OL/OL_GT2.pdf Online Learning and Game Theory Review (in Chinese)]
+- [my_summary/phase_transition/phase_transition.pdf Phase Transition Introduction (in Chinese)]
+- [my_summary/computer_network/TCP_Fairness.pdf TCP Fairness (in Chinese)]
+
+== 2021年
+- [my_summary/computer_network/Computer_Network_Notes.pdf Computer Network Notes (in Chinese)]: Copyright of the notes belongs to [https://github.com/chhzh123/CS-Notes/tree/master Hongzheng Chen], and this version is for personal study only.
+
+
+
+
+

@@ -1,0 +1,247 @@
+# jemdoc: menu{MENU}{Linux.html},nofooter
+== Linux 命令积累
+从网上积累的Linux命令自查手册
+
+== Using jemdoc  
+[./www/www.html jemdoc]
+
+== Linux
+
+~~~
+{运行库的源代码出现“当前环境没安装此库”}{}
+from dattri.algorithm.influence_function import IFAttributor
+
+ModuleNotFoundError: No module named 'dattri'
+
+我已经下载了代码在本地，我不希望安装dattri到库中
+
+解决方案：设置 PYTHONPATH 环境变量，使 Python 可以找到 dattri 模块：
+
+export PYTHONPATH=/home/caihuaiguang/DSG/dattri:$PYTHONPATH
+~~~
+
+
+~~~
+{查看目录的大小}{}
+\-h 代表 human可读，\. 表示递归显示当前目录下所有目录的大小
+
+du -h .
+cat /etc/issue
+~~~
+
+~~~
+{查看当前版本号 }{} 
+cat /etc/issue
+~~~
+
+~~~
+{文件移动：本地}{}
+mv <source file> <destination dir>
+~~~
+
+
+~~~
+{文件移动：本地和远程}{}  
+主机a存在一个大文件 /opt/test/abc.zip，传到主机b的:/opt/test/目录下。
+
+可登录到主机a下，使用scp命令如下
+
+scp /opt/test/abc.zip root@<主机b的IP地址>:/opt/test/
+
+比如：
+
+scp Tiny-ImageNet-C.tar caihuaiguang@172.18.34.38:/media/caihuaiguang/
+~~~
+
+~~~
+{运行jupyter nootbook}{}
+打开cmd, 找到对应.ipynb文件地址
+
+输入“jupyter notebook”
+
+[https://blog.csdn.net/StarandTiAmo/article/details/126663812 没有添加环境变量导致无法启动]
+~~~
+
+~~~
+{pip.exe、python.exe}{}
+在WSL下，使用如下命令查找整个电脑中 python (pip) 所在位置:
+
+whereis python(pip)
+
+进入这些位置后，能成功运行如下命令:
+
+pip.exe install mininet
+
+等价于 sudo python -m pip install mininet
+~~~
+
+~~~
+{计时}{}
+运行程序： 
+g++ main.cpp
+./a.out
+
+计时：
+time ./a.out
+
+1s后要是没有运行完，就杀掉程序：
+timeout 1 ./a.out
+~~~
+
+~~~
+{管道 |}{}
+
+管道 | 可以将左边的结果当作参数输入到右边
+
+统计当前文档下cpp文件的总代码行数
+
+find . | grep \.cpp$ | xargs cat | wc -l
+~~~
+
+== Linux查看显卡
+
+~~~
+{gpustat 包查看每张卡的用户和剩余显存}{}
+conda activate ...
+
+gpustat -i
+~~~
+
+~~~
+{nvidia GPU 查看显卡信息}{} 
+lspci | grep -i nvidia
+~~~
+ 
+~~~
+{查看指定显卡的详细信息}{} 
+lspci -v -s 35:00.0
+~~~
+前边的序号 "35:00.0"是显卡的代号
+ 
+~~~
+{Nvidia查看显存}{}  
+nvidia-smi
+
+表头释义： 
+
+Fan：显示风扇转速，数值在0到100%之间，如果计算机不是通过风扇冷却或者风扇坏了，显示出来就是N/A； 
+Temp：显卡内部的温度，单位是摄氏度；
+Perf：表征性能状态，从P0到P12，P0表示最大性能，P12表示状态最小性能；
+Pwr：能耗表示； 
+Bus-Id：涉及GPU总线的相关信息； 
+Disp.A：是Display Active的意思，表示GPU的显示是否初始化； 
+Memory Usage：显存的使用率； 
+Volatile GPU-Util：浮动的GPU利用率；
+Compute M：计算模式；  
+~~~
+
+
+== 服务器上配置环境
+0. [https://blog.csdn.net/srh20/article/details/136937398 无root权限服务器上装cuda]，还有[https://blog.csdn.net/w946612410/article/details/131786512 cudnn]
+
+1. 装conda， 见[https://www.jianshu.com/p/2f5cf2edaaef Linux安装conda]
+~~~
+{}{}
+#wget 加网址，中间可以加-c参数，断点续传
+wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+bash Miniconda3-latest-Linux-x86_64.sh  
+
+这里一直按yes或enter，想换位置装conda的话，在“or specify a different location below”下输入想要安装的位置
+
+激活刚安装完成的软件：source ~/.bashrc
+
+检查conda是否安装成功：conda --help
+
+配置conda镜像：
+conda config --add channels r 
+conda config --add channels conda-forge 
+conda config --add channels bioconda
+
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+conda config --set show_channel_urls yes
+
+查看配置镜像结果：cat ~/.condarc
+~~~
+
+2. conda下装虚拟环境
+
+~~~
+{}{} 
+# 查看当前conda环境
+conda info -e
+
+# 创建名为rna的软件环境来安装转录组学分析的生物信息学软件
+conda create -y -n  rna  python=3
+#如果不加-y，中间会问需要继续进程吗 
+#linux一般会默认安装python最新版本，除非所处的环境不能安装最新版本的。
+
+# 每次运行前，激活创建的小环境rna
+conda activate rna
+##激活成功会出现一个小括号（小环境名字，rna）
+# 退出小环境
+conda deactivate
+ 
+  
+ 
+# 查看虚拟环境列表，此时出现列表的同时还会显示其所在路径
+conda env list 
+
+# 第二步：删除环境
+conda remove -n  需要删除的环境名 --all
+~~~
+
+~~~
+{安装vllm太慢}{}
+pip install vllm==0.7.2 -i https://pypi.tuna.tsinghua.edu.cn/simple
+~~~
+
+
+~~~
+{指定某张卡可见}{} 
+export CUDA_VISIBLE_DEVICES=2,3
+~~~
+
+~~~
+{conda装pytoch的话要在官网上查版本号}{} 
+conda install pytorch torchvision torchaudio pytorch-cuda=11.6 -c nvidia
+~~~
+
+~~~
+{'\r': command not found}{}
+Remove trailing \r character that causes this error:
+
+sed -i 's/\r$//' filename
+
+Explanation: 
+
+Option -i is for in-place editing, we delete the trailing \r directly in the input file. 
+~~~
+
+== Git
+~~~
+{Push code to remote branch}{}
+git clone https... # 
+
+git add .
+git commit -m "initial"
+git push
+~~~
+
+== tmux
+~~~
+{keep windows on}{}
+tmux new -s "name"
+tmux attach -t "name"
+tmux kill-session -t "name"
+~~~
+
+
+== VSCode for C++
+
+基本原理见[https://oi-wiki.org/tools/editor/vscode/ OI-wiki]。
+- 首先装GCC，[https://nuwen.net/mingw.html MinGW]，注意环境变量配好[https://blog.csdn.net/qq_55193018/article/details/126103009 CSDN]
+- 然后装vscode，各种插件（glangd之类的）
+- 最后配置三个文件，见[https://blog.csdn.net/qq_55193018/article/details/126103009 CSDN]

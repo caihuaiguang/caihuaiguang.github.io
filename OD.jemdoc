@@ -1,0 +1,24 @@
+# jemdoc: menu{MENU}{OD.html},nofooter
+==  Online Decision
+
+== Online Learning
+- [http://www.cs.cmu.edu/~sandholm/cs15-888F23/Lecture9.pdf Learning in Multi-Player Games: Regret, Convergence, and Efficiency]
+- FTL是最简单使用regret的算法（选取每次regret最大的动作），但是会出现乒乓现象；
+- RM则是按照regret的分布进行概率地选动作，但差的动作要是变好了不能马上反应出来；
+- RM\+更进一步将差的（就是说累计遗憾小于0）动作当做累计遗憾为0的动作来处理，实际效果比RM好；RM\+的Regret为$\Omega(\sqrt T)$, from [https://arxiv.org/pdf/2305.14709.pdf Regret Matching+:(In) Stability and Fast Convergence in Games]
+- FTRL则是另一条路，给相邻时刻动作的转变加正则，这样规避了FTL的缺点；
+- 当正则项为熵的时候，FTRL等价于著名的MWU。MWU的Regret为$\Omega(\sqrt T)$, from [https://arxiv.org/pdf/2006.04953.pdf  Hedging in games: Faster convergence of external and swap regrets]。
+- (Hindsight rationality, informal). The player has “learnt” to play the game when looking back at the history of play, they cannot think of any transformation $\phi: X \to X$ of their strategies that
+when applied at the whole history of play would have given strictly better utility to the player. This is from [https://www.mit.edu/\~gfarina/6S890/lecture4.pdf MIT 6.S890 — Topics in Multiagent Learning (F23)].
+ 这实际上很像regret了。如果我们能构造相同过程：神经网络给出的解是天启，来和当前决策做比较，就能定义“希望”类似的量（hope），这样所有的regret算法就也有对应版本的hope算法。听上去好像是MPC（先做后续10步决策，但只采用1步）。参考文献：[https://proceedings.mlr.press/v139/agarwal21b/agarwal21b-supp.pdf A Regret Minimization Approach to Iterative Learning Control], [https://arxiv.org/pdf/1902.08967.pdf An Online Learning Approach to Model Predictive Control]
+- OMD和FTRL都有predictive [https://www.cs.cmu.edu/~sandholm/cs15-888F21/L07_ftrl_omd.pdf 版本]
+
+== Blackwell Approachability
+- [https://www.mit.edu/~gfarina/6S890/L05_appendix.pdf From  Blackwell approachability algorithms to  regret matching algorithms]
+- [http://www.cs.cmu.edu/~sandholm/cs15-888F21/L08_predictive_approachability.pdf From regret minimization algorithm to Blackwell approachability algorithms]
+- [https://proceedings.mlr.press/v19/abernethy11b/abernethy11b.pdf Blackwell approachability and no-regret learning are equivalent]
+- [https://arxiv.org/pdf/2007.14358.pdf Connecting FTRL, OMD with RM, RM\+ using Blackwell approachability algorithm]
+- 从 External Regret 到 $\Phi$-Regret。目前建立的联系都是 Blackwell Approachability 和 External Regret 之间的，能不能推广到 $\Phi$-Regret 呢？
+- 区域 $S$ 是不是就是均衡的范围？类似于 [https://arxiv.org/pdf/2305.19496.pdf Is Learning in Games Good for the Learners?] 的 [https://neurips.cc/media/neurips-2023/Slides/70694.pdf 图示]。
+- Last-iterate 版本的 Blackwell Approachability 长啥样？目前的 Blackwell Approachability 和 Average-iterate 的收敛性有很强的关系，那么适用于 Last-iterate 的在线算法可否找到对应的 Blackwell Approachability？
+

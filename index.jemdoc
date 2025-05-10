@@ -1,0 +1,88 @@
+# jemdoc: menu{MENU}{index.html}
+== Huaiguang Cai 蔡怀广
+
+~~~ 
+{}{img_left}{pictures/chg.jpg}{alt text}{120}{150}{./pictures/chg.jpg}
+Independent Researcher\n
+[http://english.ia.cas.cn/ Institute of Automation, Chinese Academy of Sciences] \n
+[https://www.sysu.edu.cn/ Sun Yat-Sen University]\n
+# [https://english.ucas.ac.cn/  University of Chinese Academy of Sciences (UCAS)] \n
+E-mail: caihuaiguang AT gmail.com \n\n
+[https://github.com/caihuaiguang \[Github\]] [https://scholar.google.com/citations?user=2QcmztMAAAAJ&hl=en \[Google Scholar\]] [./my_summary/蔡怀广_自动化所_中山大学_博弈论_大模型.pdf \[CV\]]\n
+
+#  [./my_summary/蔡怀广_自动化所_中山大学_博弈论_大模型.pdf \[CV\]]
+# {{<td width="35%" align ="center">  
+# <img height="70"  src="pictures/UCAS.png" border="0" style="float:middle"> </td>}}
+~~~
+
+== Research Interests
+My research aims to develop *reliable*, *explainable*, and *practical* decision-making algorithms. I am also interested in methods with elegant mathematical modeling.
+Currently, my focus is on enhancing the *reasoning capabilities* of large language models.
+- Algorithms (Algorithmic Game Theory, Online Learning Theory, Ad Auction)
+- Machine Learning (Explainable AI, Edge computing, Recommendation system)
+- Large Language Models (Long Context, Enhanced Reasoning, Efficient Training)
+
+# {{
+# <div style="text-align: center;">
+#     <img width="80%" src="pictures/决策与LLM.jpg" border="0" style="float: middle;">
+# </div>
+# }}
+
+== Publications 
+*Online Resource Allocation for Edge Intelligence with Colocated Model Retraining and Inference*
+# [./Publication/INFOCOM2024/Online_Resource_Allocation_for_Edge_Intelligence_with_Colocated_Model_Retraining_and_Inference.pdf \[PDF\]]
+[https://arxiv.org/abs/2405.16029 \[Paper\]]
+[./Publication/INFOCOM2024/Online_Resource_Allocation_for_Edge_Intelligence_with_Colocated_Model_Retraining_and_Inference_slides.pdf \[Slides\]]
+[https://github.com/caihuaiguang/ORRIC \[Code\]]
+\n
+Huaiguang Cai, Zhi Zhou (Sun Yat-sen University), Qianyi Huang (Sun Yat-sen University)\n
+In IEEE International Conference on Computer Communications (*INFOCOM, CCF-A*), Vancouver, Canada, 2024
+
+*CHG Shapley: Efficient Data Valuation and Selection towards Trustworthy Machine Learning* 
+# [https://arxiv.org/abs/2406.11730 Paper]\n
+[https://openreview.net/forum?id=uVMZgtw2pf \[OpenReview\]]
+[https://github.com/caihuaiguang/CHG-Shapley-for-Data-Valuation \[Code1\]]
+[https://github.com/caihuaiguang/CHG-Shapley-for-Data-Selection \[Code2\]]
+\n
+Huaiguang Cai\n
+Arxiv
+
+*CAMs as Shapley Value-based Explainers* 
+[https://arxiv.org/abs/2501.06261 \[Paper\]]
+[https://github.com/caihuaiguang/pytorch-shapley-cam \[Code\]]
+[https://github.com/jacobgil/pytorch-grad-cam \[Merged into the official GradCAM repository (11k stars)\]]\n
+Huaiguang Cai\n
+The Visual Computer (*SCI*)
+
+== Project
+
+*Learning in games, last-iterate, Blackwell approachability theorem*
+[https://github.com/caihuaiguang/PIDCFR/blob/main/pic/full.pdf \[Results\]]\n
+Experimentally observed that predictive CFR algorithms converge much faster in last-iterate than in average-iterate in non-HUNL two-player zero-sum games.
+I am now working on connecting the Proportional-Integral-Derivative (PID) algorithm in control theory with the Counterfactual Regret Minimization (CFR) algorithm in game theory by developing a last-iterate version of the Blackwell approachability theorem.\n
+
+
+
+== Education Background
+
+
+I am a master's student majoring in Pattern Recognition and Intelligent Systems at [http://english.ia.cas.cn/ Institute of Automation, Chinese Academy of Sciences (CASIA)], [https://english.ucas.ac.cn/  University of Chinese Academy of Sciences (UCAS)], advised by [https://people.ucas.ac.cn/~wenshengzhang Prof. Wensheng Zhang].
+
+I received my bachelor's degree in Computer Science from [https://cse.sysu.edu.cn/  School of Computer Science and Engineering], [https://www.sysu.edu.cn/ Sun Yat-Sen (Zhongshan) University], advised fortunately by [https://cse.sysu.edu.cn/teacher/ZhouZhi Prof. Zhi Zhou] and [https://cse.sysu.edu.cn/teacher/WangChangdong Prof. Chang-Dong Wang].
+
+# == Professional Service
+# - Conference Reviewer: ICLR'2025
+
+
+#   == License
+#  Copyright \C 2007--2012 Jacob Mattingley.
+
+#  jemdoc is free software; you can redistribute it and\/or modify it under the
+#  terms of the [http://www.gnu.org/licenses/gpl-3.0.html GNU General Public
+#  License] as published by the Free Software Foundation; either version 3 of the
+#  License, or (at your option) any latZer version.
+
+#  jemdoc is distributed in the hope that it will be useful, but WITHOUT ANY
+#  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+#  PARTICULAR PURPOSE. See the [http://www.gnu.org/licenses/gpl-3.0.html GNU
+#  General Public License] for more details.

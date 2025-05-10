@@ -1,0 +1,120 @@
+# name: Build and Deploy
+
+# on:
+#   push:
+#     branches:
+#       - main  # Adjust the branch name as needed
+
+# jobs:
+#   compile_jemdoc:
+#     runs-on: ubuntu-latest
+#     steps:
+#     - uses: actions/checkout@v3 actions/checkout@v3, actions/setup-python@v3
+#     - name: Set up Python 3.8
+#       uses: actions/setup-python@v3
+#       with:
+#         python-version: 3.8
+#     - name: Update content
+#       run: | 
+#         # Set the directory where your Jemdoc files are located
+#         jemdoc_directory="./"
+#         # Loop through all Jemdoc files in the directory
+#         for source_file in "$jemdoc_directory"/*.jemdoc; do
+#             # Extract the file name without the directory path
+#             file_name=$(basename "$source_file")
+        
+#             # Construct the output HTML file name based on the Jemdoc file name
+#             output_file="$jemdoc_directory/${file_name%.jemdoc}.html"
+        
+#             # Check if the source file has been modified
+#             if [ "$source_file" -nt "$output_file" ]; then
+#                 echo "Compiling $source_file to $output_file" 
+#                 python3 jemdoc_latex.py -c mysite_icon.conf "$source_file"  
+#             else
+#                 echo "$source_file has not been modified. Skipping compilation."
+#             fi
+#         done 
+        
+#         python3 jemdoc_latex.py -c mysite.conf  Index.jemdoc    
+#         jemdoc_directory="known/Blog"
+#         # Loop through all Jemdoc files in the directory
+#         for source_file in "$jemdoc_directory"/*.jemdoc; do
+#             # Extract the file name without the directory path
+#             file_name=$(basename "$source_file")
+        
+#             # Construct the output HTML file name based on the Jemdoc file name
+#             output_file="$jemdoc_directory/${file_name%.jemdoc}.html"
+        
+#             # Check if the source file has been modified
+#             if [ "$source_file" -nt "$output_file" ]; then
+#                 echo "Compiling $source_file to $output_file" 
+#                 python3 jemdoc_latex.py -c mysite_icon.conf "$source_file"  
+#             else
+#                 echo "$source_file has not been modified. Skipping compilation."
+#             fi
+#         done 
+#     - name: commit
+#       run: |
+#         git config --global user.email caihuaiguang@gmail.com
+#         git config --global user.name caihuaiguang
+#         git add .
+#         git commit -m "update" -a 
+#     - name: Push changes
+#       uses: ad-m/github-push-action@master
+#       with:
+#         github_token: ${{ secrets.GITHUB_TOKEN }}
+
+ 
+#   deploy:
+#     needs: compile_jemdoc 
+#     permissions:
+#       pages: write      # to deploy to Pages
+#       id-token: write   # to verify the deployment originates from an appropriate source
+
+#     # Deploy to the github-pages environment
+#     environment:
+#       name: github-pages
+#       url: ${{ steps.deployment.outputs.page_url }}
+
+#     # Specify runner + deployment step
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Deploy to GitHub Pages
+#         id: deployment
+#         uses: actions/deploy-pages@v2 # or the latest "vX.X.X" version tag for this action 
+   
+
+
+# https://www.cnblogs.com/marsggbo/p/12090703.html
+name: Python application
+
+on: [push]
+
+jobs:
+  build: 
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.8
+    - name: Update content
+      run : |
+        python3 jemdoc_latex.py -c mysite_icon.conf *.jemdoc  
+        python3 jemdoc_latex.py -c mysite.conf  index.jemdoc    
+  #      cd true/courage/time/ 
+  #      python3 ../../../jemdoc_latex.py -c mysite.conf *.jemdoc  
+  #      cd ../../../www
+  #      python3 ../jemdoc_latex.py *.jemdoc  
+    - name: commit
+      run: |
+        git config --global user.email caihuaiguang@gmail.com
+        git config --global user.name caihuaiguang
+        git add .
+        git commit -m "update" -a 
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+    

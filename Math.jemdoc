@@ -1,0 +1,17 @@
+# jemdoc: menu{MENU}{Math.html},nofooter
+== Math
+
+== Inequality
+- [https://www.youtube.com/watch?v=xGqU-Idx5JY Cauchy-Schwarz]: $E^2[XY] \le E(X^2) E(Y^2)$
+- [https://www.lkozma.net/inequalities_cheat_sheet/ineq.pdf Useful Inequalities]
+- [https://xingyuzhou.org/blog/notes/Lipschitz-gradient Lipschitz continuous gradient]
+- $\|(x+y)^+\|_2^2 \le \|x^+ + y\|_2^2$
+- $\|(x+y)^+\|_2^2 \ge \|x^+\|_2^2 +2(x^+ \cdot y)$
+
+== Optimization
+- [https://shuyuej.com/books/Lectures%20on%20Convex%20Optimization.pdf Yurii Nesterov: Lectures on Convex Optimization]
+- [http://hliangzhao.me/materials/Lyapunov_optimization.pdf Lyapunov Optimization: An Introduction]
+
+== Convexity
+- If $\forall y,f(\cdot,y)$ is convex, then $x \mapsto \max_y f(x, y)$ is convex.
+- If $(x,y) \mapsto f(x,y)$ is convex, then $x \mapsto \min_y f(x, y)$ is convex.

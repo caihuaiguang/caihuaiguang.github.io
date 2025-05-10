@@ -1,0 +1,185 @@
+# jemdoc: menu{MENU}{backup.html},nofooter
+== Backup
+记录一些可能用到的（暂时不会看的）资源和总结
+
+CNN做自主导航
+   - SLAM 难部署在商用无人机上；
+   - 深度学习：强化学习试错损耗大；
+   - 自监督（无人机搜索数据集）
+   - 类似工作：Dronet（CNN当回归模型），TrailNet（CNN当分类模型，左右中，角度，用自己搜集的数据集（没有用到无人机但是）），
+   AlexNet（将输入切分为左右中三部分，无人机自己搜集的数据集（保护措施，选择一个方向直到碰撞，打标注时区分碰不碰撞））
+   - 输入当前帧和前面一帧；做转弯决策时可以用三个方向的距离
+   - 这种预测下一帧的感觉类似于视频编码
+   - 回归模型在自主导航的问题上优于分类模型
+   - 泛化性不高，在会议室训练就只能在会议室跑
+   
+ROSLess 
+   - 边缘计算的场景
+   - 多个内网如何相互通讯
+     -- 两个路由器VPN；缺点：子网会动态变化，拓扑结构变化
+     - zenoh提供了命名数据网络的功能，类似于消息队列pub-sub结构；但更像是网络；
+     -- 除了网络出发，能不能从机器的角度出发，手机流量？
+     -- AP
+     -- 心路历程：转换方向，发现工具，使用现成的；失败后转换合作模型，纠正错误；耗时2月
+     -- 微服务
+     -- 大部分人都无法掌握庞大的代码；seamless collaboration；
+   
+终生学习
+  - 单个NN多任务
+  - 可塑性和稳定性的均衡
+  - 方法：参数隔离的方法——Packnet——筛选出不重要的神经元学习性的；
+  - 模型表现和模型参数
+  - 基于数据的方法
+  - 基于先验知识的方法EWC，FIsher （不是保存数据，而是保存参数）
+  - 重播的方法——存储旧数据，旧模型；（隐私问题，存了数据）
+    -- icaRL n个二分类
+    -- 边缘测重训练的原因——训练和测试数据分布不一样，offline数据较少（模型修正），训练大模型，
+        在线学习其他具体场景，transfer learning ，模型压缩；
+    -- 边缘计算解放空间上的学习问题；之前大部分是时间上的
+  
+云边协同运行AI
+  - AI运行终端
+    -- 模型压缩（精度损失）
+    -- 压缩数据传云端
+    -- 结合模型压缩和数据压缩——部分模型放设备，得到的中间结果结合网络切片（主要成分？）再传到云。
+    -- 自动选择模型的压缩程度，写出损失函数？
+    -- 训练多分枝；CLIO
+    -- 内存切换模型；没有考虑推断时网络速率变化，同样适用于online offline
+  
+联邦学习激励机制
+  - cross-silo
+  - 给钱是围成一轮
+  - 激励机制满足三个性质
+  - slater 强对偶
+  - 分布式增广拉格朗日
+  - MNIST
+  - 社会福利，convex ，纳什均衡唯一性，
+  - 电力问题，多个纳什均衡社会福利一样
+  - 关注一些强假设，
+  
+edgeML: IOTDI 2021
+   - 渐进式NN 退出 progressive，有额外开销
+   - 找阈值和划分点
+   - 难点：环境配置动态变化
+   - 有RL机制，可以看看咋设置s,a,r
+   - 帕累托最优
+   - DDPG
+   - 还可以迁移到新设备
+   
+privacy-preserving ML
+   - 梯度可以泄露隐私
+   - MIXUP，instaHIde
+   - 攻击：聚类
+   - 差分隐私
+   - 隐私保护——分为training 和 inferring； AI都是用encode，系统的理论成熟；
+
+跨节点 联邦 图学习：GNN+FL ，cross-node federated gnn for spa 
+   - gnn 将节点弄到高维，保持关系的表征
+   - 输入为时空关系的图，那么对于每个时刻都有一个embedding，可以用这个来预测；一般的设计模式
+     -- 时间（RNN），空间（GCN）特征先后学习，这篇文章先搞个
+     -- FL：local training, weight aggression, global average, weight sharing
+   - 联邦学习的方式训练时空GNN，
+   - fmtl, fedavg
+   - 缺点：隐私保护，伪联邦，缺少模型创行和理论的分析
+
+sfog: seamless fog 
+   - IOT资源能源有限，因此将其卸载到边缘节点或雾节点，但IOT有移动性，造成之前传的数据（和中间文件）要从之前雾节点传输到另一个雾节点（基站的中转？）连接重定向，服务恢复导致的时间
+   - 直觉：将服务恢复提前，覆盖连接重定向的时间
+   - 这篇文章进行了理论分析，
+   - 这篇文章有拥塞控制的方法：调整数据请求数量；停等策略，流水线，有限状态机，
+
+inference delivery network 
+   - inference部署easy?有实时性要求！
+   - inference有之前有两种——本地，云；现在多了边缘计算的场景，要考虑资源编排；
+   - 有点像内容分发网络，请求可以到不同节点（将小型服务器，iot，乃至云都看作是节点）
+   - 类似工作：similarity caching，modeling splitting
+   - 等价转换：可以将cost最小等价维cost max-cost；
+   
+聚类联邦学习
+
+HPDC，顶会； 
+   - 联邦学习特点数据上非独立；同分布 
+   - 等到最慢的模型更新了才能进行整体模型更新 
+   - 同步异步；隐私保护这块比较适合同步； 
+   - response time和数据量没关系吗？
+
+图神经网络 
+- GCN GAT
+- 图操作（内存密集型）用CPU，NN（计算密集型）用GPU?saga图流程
+- serverless，但是分配给你的资源和带宽都有限制；于是用serverless解决资源的问题，用pipeline解决网络带宽资源
+- osdi dorylus
+
+Nimble 
+- DAG变成二部图再确定可并行的计算？ 
+- 之前大部分工作是将training和inference交给不同的GPU，
+将training交给哪些high thoughoutput的，inference交给low latency，实际上浪费了gpu。
+
+
+
+网络安全几个问题 
+- 保密性，确保信息只会被特定的人看到
+- 判断信息有没有被中间篡改
+- 通信时要确认对方是谁
+
+video super-resolution and caching
+
+- 超分辨率：对于图像，用NN；对于视屏，挖掘
+
+hivemind 
+- 最短路径
+- 优化，非线性优化
+
+编码计算 
+- 牺牲了存储和计算，满足通讯；还可以用计算来换鲁棒性； 
+- MapReduce 
+- master worker：只有master可以访问整个数据库，worker之间不能通讯 
+- s-对角线编码 
+- 拉格朗日插值 
+- 网络编码，为了减少传输；港中文发明的；
+
+SLAM：定位 
+- gazebo：用于环境仿真；
+
+v8 contest 
+
+webAssembly 和container为了实现隔离，AWS 有面向edge的，和CDN搞在一起
+ 
+RHC：预测要完全一样，avgcase
+ 
+联邦学习：全局参数还是personal 参数 
+- 联邦学习NN：分为global层和personal层；假设：前一部分起到特征提取，后面是个性化分类
+- 分到不同类，vx、ux分到不同类，那么$0 = (vx)^T(ux)=x^Tv^Tux$，即$u,v$正交
+
+
+
+IOT device将任务卸载到周围的fog节点； 
+- UCB，MAB，regret，lyapunov处理长期约束，
+- 背景：task决定是否本地计算或卸载到其他fog节点，以达到最小化时延且保证资源消耗限制
+- 方法：lyapunov优化+UCB在线学习未知参数的想法。
+ 
+object detection
+
+- 大图片上进行检测
+- sota思路，用实验来验证
+- 我们可以不均等切分图片，不同区域用不同大小的模型
+- flexible high-resolution object detection on edge devices with tunable latency：系统一流；
+- preprocessing每次从0开始
+- PID可能达不到精度，控制
+ 
+
+大数据技术 
+- Flink：
+- MapReduce：shuffle阶段在硬盘中，因此慢；批数据处理
+- spark：基于内存，
+- storm：只做流数据处理，内存里就行
+- flink：可以基于流做批处理；
+- 存储，计算，通讯
+- 流处理：高吞吐，低时延，高可靠（容错，用check point）
+ 
+
+model parallelism
+
+- CNN中前向中间结果是主要的占内存之处；
+- pipedream，模型并行，数据并行
+
+ 

@@ -1,0 +1,46 @@
+# jemdoc: menu{MENU}{LLM_RL.html},nofooter
+== Large Language Model and Reinforcement Learning
+
+== Enhanced Reasoning
+- 当模型不自信时中断自回归过程，插入wait，but之类的词语。一方面不需要训练即可提升模型推理能力（因为token量更多了，test time compute），另一方面造出了有反思过程的SFT数据。
+- [https://arxiv.org/abs/2501.19393 s1: Simple test-time scaling]，当模型要停止输出时加入wait，验证了越多的token通常带来越好的推理性能。
+- 不自信的判断可以基于Perplexity来确定，这篇文章提出的基于PPL的IFD分数衡量了指令对生成对应响应的帮助程度：[https://arxiv.org/abs/2402.00530 Superfiltering: Weak-to-Strong Data Filtering for Fast Instruction-Tuning]
+- 推理增强技术和训练相辅相成，只要存在推理增强的方法，那么训练就能通过SFT或者RL这些数据获得提升。实际上就是将推理增强的这种可能是无法微分的方式训进模型中。
+推理增强的技术有：思维链（或者说In Context Learning）、Best of N、上面的修改自回归的方法（s1）；因此模型的最终形态就是用很长的思维链（性能受限且受益于长文）、稳定输出最优解（[https://arxiv.org/abs/2304.06767 RAFT]）、善于反思的然后超级自信的模型。
+- Self-Play for LLM：用RL同时训reward model 和 policy model。甚至进一步，一个模型同时当reward model和policy model。思维链内部就有很多次尝试且自己就是个reward model（性能受限且受益于自博弈）。可能的好处：
+1. 给大模型加了个元认知：知道自己对不对，因此可能有助于减少幻觉。
+2. 提高数据利用率。policy model的单条回复重新当做reward model的输入。
+3. 更快反思、更小模型上反思的policy model。因为训练方式也可看作是蒸馏反思Prompt的过程。
+4. 更好的reward model。reward model训练数据和policy model同源。
+
+
+== Efficient Training
+- 层间主参数共享，层与层之间差异仅在lora矩阵。参考资料 [https://arxiv.org/abs/2501.18596 DeltaLLM: Compress LLMs with Low-Rank Deltas between Shared Weights]，
+[https://arxiv.org/abs/1909.11942 ALBERT: A Lite BERT for Self-supervised Learning of Language Representations].
+
+
+== Long Context and Reasoning
+- 长文（Long Context）和推理能力（Long CoT）的共同底层特性都是长距离依赖能力，因此训了一个另一个也能提升。能不能类似于self play的做法，迭代式推进模型长文和推理能力呢？
+
+
+== Reinforcement Learning
+- PPO based DPO，reward应该有着clip操作。
+- 将SFT加三盲一致能不能等价于一种新的RL算法或者reward计算方式？是不是一条和数学RL不同的路线？是的，类似于[https://arxiv.org/abs/2304.06767 RAFT]。
+- 测试时强化学习：同个query，那些think给answer带来的概率增大的数据更有价值，利用价值当做reward来训模型。这便是一条和数学这种有标答的RL不同的路线。
+- 通过设计奖励函数激励模型说真话。将拍卖机制引入强化学习。
+- SFT有没有clip操作？得到类似loss加权的东西？
+
+
+
+== Reinforcement Learning materials
+- CS285,Sergey Levine,UC Berkeley, 《Deep Reinforcement Learning, Decision Making, and Control》
+- [https://deepreinforcementlearningbook.org/ Deep Reinforcement Learning: Fundamentals, Research and Applications]
+- [https://rltheorybook.github.io/ Reinforcement Learning: Theory and Algorithms]
+- [http://nanjiang.cs.illinois.edu/cs542f22/ CS 542 Statistical Reinforcement Learning (F22)]
+
+
+== System
+- [https://openmlsys.github.io/ 机器学习系统：设计和实现]
+- [https://zsdonghao.github.io/ Hao Dong(董豪)] 
+- [https://chhzh123.github.io/summary/distributed-systems/ 分布式系统的课程笔记]
+   

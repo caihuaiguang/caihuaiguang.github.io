@@ -1,0 +1,103 @@
+# jemdoc: menu{MENU}{jem.html},nofooter
+= Quick tutorial of Jemdoc
+*Attention*: This page is modified from [https://github.com/CharlesZJCHEN/charleszjchen.github.io/blob/main/jem.jemdoc Zijian Chen's homepage].\n\n
+These static pages are generated using Jemdoc, which is originally developed by [https://jemnz.com Jacob Mattingley]. Source code (through Github) can be accessed [https://github.com/jem/jemdoc here], or you can just make modifications on [https://github.com/CharlesZJCHEN/charleszjchen.github.io my version]. Now it also supports MathJax! See [https://www.mit.edu/~wsshin/jemdoc+mathjax.html this page] or the [https://github.com/wsshin/jemdoc_mathjax GitHub repo].
+
+== Steps to generate a new HTML page
+
+=== regular pages
+
+0. Say, your folder is +\/User\/xxx\/myJem+
+
+1. Create a +xxx.jemdoc+ file (by TextEdit or something). This should include:
+
+~~~
+{}{}
+# jemdoc: menu{MENU}{xxx.html}
+= Your section title
+~~~
+
+2. Use +Terminal+ (or +cmd+ in Windows) to generate HTML file
+
+~~~
+{}{}
+cd \User\xxx\myJem
+python2 jemdoc.py xxx
+~~~
+
+
+=== Menu
+
+Create a file named +MENU+ WITHOUT any extension name, and put the following (say)
+
+~~~
+{}{}
+Home
+    About me           [index.html]
+    What's new		 [new.html]
+~~~
+Then use +Terminal+ 
+~~~
+{}{}
+cd \User\xxx\myJem
+python2 jemdoc.py MENU
+~~~
+Remember to re-generate all other pages after you update the menu.
+
+=== Pages with MathJax
+
+You first need to download [jemdoc3.py] and [mysite.conf]. Steps to generate a page with equations are more or less the same, except that you need to use
+~~~
+{}{}
+python2 jemdoc3.py -c mysite.conf xxx
+~~~
+In this case, python 3 also works!
+~~~
+{}{}
+python3 jemdoc3.py -c mysite.conf xxx
+~~~
+
+The following is an example:
+~~~
+{}{}
+\(
+\begin{align}
+\nabla \cdot \mathbf{D} &= \rho_f\label{eq:D}\\
+\nabla \cdot \mathbf{B} &= 0\label{eq:B}\\
+\nabla \times \mathbf{E} &= -\frac{\partial\mathbf{B}}{\partial t}\label{eq:E}\\
+\nabla \times \mathbf{H} &= \mathbf{J}_f - \frac{\partial\mathbf{D}}{\partial t}\label{eq:H}
+\end{align}
+\)
+~~
+\(
+\begin{align}
+\nabla \cdot \mathbf{D} &= \rho_f\label{eq:D}\\
+\nabla \cdot \mathbf{B} &= 0\label{eq:B}\\
+\nabla \times \mathbf{E} &= -\frac{\partial\mathbf{B}}{\partial t}\label{eq:E}\\
+\nabla \times \mathbf{H} &= \mathbf{J}_f - \frac{\partial\mathbf{D}}{\partial t}\label{eq:H}
+\end{align}
+\)
+For inline equations like $Ax+b$, simply use + \$Ax\+b\$ +. To reference an equation $\eqref{eq:E}$, use +\$\\++eqref{eq:E}\$+.
+
+
+== Cheatsheet
+
+
+See [https://ml.cs.tsinghua.edu.cn/~wenbo/jemdoc.html here].
+
+== Underscore Example
+
+Like *bold* and /italic/, _underscore_ can be used for emphasis in this modified version of +jemdoc+.  Useful for highlighting different parts of a bibliography item as:
+
+1. _First Author_, Second Author, and *Corresponding Author*, "Amazing Paper," /High-impact Journal/, vol.~1, pp.~1--10 (2014).
+
+
+== jemdoc+MathJax in Action 
+Here are a few examples using jemdoc+MathJax:
+- [https://magickd.github.io/ Canhui Chen (陈灿辉)]
+- [http://people.iiis.tsinghua.edu.cn/~huang/index.html Longbo Huang (黄隆波)]
+- [https://ling-pan.github.io/ Ling Pan (潘玲)]
+- [https://www.cse.msu.edu/~tangjili/index.html Jiliang Tang (汤继良)]
+- [https://bicmr.pku.edu.cn/~wenzw/index.html Zaiwen Wen (文再文)]
+- [https://www.mhchen.com/advice.html Minghua Chen]
+

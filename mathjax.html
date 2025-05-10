@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>MathJax Example</title>
+<style type="text/css">
+.abs {
+ background-color: #eefaff;
+ color: #202020;
+ max-width: auto;
+ border: 1px solid #dddddd;
+ padding: 7px;
+ display: none;
+}F
+li{
+    margin-top: 10px;
+}
+li:first-child {
+    margin-top:0;
+}
+</style>
+<script type="text/javascript">
+function showAbstract(e){
+   var div;
+   for(div = e.nextSibling; div.className != "abs"; div = div.nextSibling);
+   if (div.style.display=="block"){
+     div.style.display="";
+   } else {
+     div.style.display="block";
+   }
+   return true;
+}
+</script>
+<script>
+	function toggle(pId) {
+	var e=document.getElementById(pId);
+	if (!e) return;
+	if (e.style.display == "none") {
+		e.style.display = "block"
+	} else {
+		e.style.display = "none"
+	}
+	return;
+	}
+</script>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+<link rel="icon" type="image/x-icon" href="./pictures/monster-icons/ICO/kidaha-02.ico" >
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Huaiguang Cai</div>
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-item"><a href="Link.html">Link</a></div>
+<div class="menu-category">Idea</div>
+<div class="menu-item"><a href="GT.html">Game&nbsp;Theory</a></div>
+<div class="menu-item"><a href="OD.html">Online&nbsp;Decision</a></div>
+<div class="menu-item"><a href="LLM_RL.html">LLM&nbsp;and&nbsp;RL</a></div>
+<div class="menu-category">Record</div>
+<div class="menu-item"><a href="Paper_Daily.html">Paper&nbsp;Daily</a></div>
+<div class="menu-item"><a href="Summary.html">Summary</a></div>
+<div class="menu-item"><a href="Talk.html">Talk</a></div>
+<div class="menu-category">Material</div>
+<div class="menu-item"><a href="Linux.html">Linux</a></div>
+<div class="menu-item"><a href="English.html">English</a></div>
+<div class="menu-item"><a href="Math.html">Math</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>MathJax Example</h1>
+<div id="subtitle">
+In this modified version of <tt>jemdoc</tt>, a LaTeX equation block can be typed in as
+</div>
+</div>
+<p style="text-align:center">
+\[
+\nabla \cdot \mathbf{D} = \rho_f\\
+\nabla \cdot \mathbf{B} = 0,\\
+\nabla \times \mathbf{E} = -\frac{\partial\mathbf{B}}{\partial t}\\
+\nabla \times \mathbf{H} = \mathbf{J}_f - \frac{\partial\mathbf{D}}{\partial t}.
+\]
+</p><p>
+You can also align equations using LaTeX's <tt>aligned</tt> block:
+</p>
+<p style="text-align:center">
+\[
+\begin{aligned}
+\nabla \cdot \mathbf{D} &amp;= \rho_f\\
+\nabla \cdot \mathbf{B} &amp;= 0\\
+\nabla \times \mathbf{E} &amp;= -\frac{\partial\mathbf{B}}{\partial t}\\
+\nabla \times \mathbf{H} &amp;= \mathbf{J}_f - \frac{\partial\mathbf{D}}{\partial t}.
+\end{aligned}
+\]
+</p><p>
+To number the equation block, wrap the equations with LaTeX's <tt>equation</tt> block:
+</p>
+<p style="text-align:center">
+\[
+\begin{equation}
+\begin{aligned}
+\nabla \cdot \mathbf{D} &amp;= \rho_f\\
+\nabla \cdot \mathbf{B} &amp;= 0\\
+\nabla \times \mathbf{E} &amp;= -\frac{\partial\mathbf{B}}{\partial t}\\
+\nabla \times \mathbf{H} &amp;= \mathbf{J}_f - \frac{\partial\mathbf{D}}{\partial t}.
+\end{aligned}
+\end{equation}
+\]
+</p><p>
+Instead, you can use LaTeX's <tt>align</tt> (not <tt>aligned</tt>) block to number the individual equations:
+</p>
+<p style="text-align:center">
+\[
+\begin{align}
+\nabla \cdot \mathbf{D} &amp;= \rho_f\label{eq:D}\\
+\nabla \cdot \mathbf{B} &amp;= 0\label{eq:B}\\
+\nabla \times \mathbf{E} &amp;= -\frac{\partial\mathbf{B}}{\partial t}\label{eq:E}\\
+\nabla \times \mathbf{H} &amp;= \mathbf{J}_f - \frac{\partial\mathbf{D}}{\partial t}\label{eq:H}
+\end{align}
+\]
+</p><p>
+You can also type inline equations as \(A x = b\).  Referencing equations is done as Eqs.&nbsp;\(\eqref{eq:E}\) and \(\eqref{eq:H}\).
+</p>
+<p>
+Immmd<br />
+</p>
+<p>
+</p>
+<p>
+dfdsaf
+</p>
+<p>
+dfdsaf
+</p>
+<ul>
+<li><p>fdasdfads
+</p>
+</li>
+<li><p>dsagasdgas
+</p>
+</li>
+</ul>
+<p>
+dfasfas
+</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,14 @@
+*.pyc
+otherstuff
+proctags.py
+*.swp
+tags.vim
+tags
+matlab
+build
+MANIFEST
+jo 
+stage/ 
+# Folders to ignore
+Story.jemdoc
+Story.html

@@ -1,0 +1,235 @@
+# jemdoc: menu{MENU}{Link.html},nofooter
+== Link 
+"So it looks like what you thought it would?"
+"Better. Unattainably better." 
+"Liz, they're just people."
+\-\- from "Homeless to Harvard: The Liz Murray Story".
+
+== Online Learning and Game Theory
+- [https://www.mit.edu/~gfarina/about/ Gabriele Farina]: MIT, Libratus: game theory, machine learning (especially online learning), optimization, and statistics. [https://liumy.netlify.app/ Mingyang Liu]
+- [https://vitercik.github.io/ Ellen Vitercik]: Stanford, machine learning theory, algorithm design, and the interface between economics and computation.
+- [http://people.csail.mit.edu/costis/ Constantinos Daskalakis]: MIT, Theory of Computation, and its interface with Economics, Game Theory, Machine Learning, Statistics and Probability Theory, [https://noahgol.github.io/ Noah Golowich]
+- [http://www.cs.cmu.edu/~sandholm/ Tuomas Sandholm]: CMU, Libratus, [http://www.cs.cmu.edu/~sandholm/cs15-888F23/ computational game theory]
+- [http://www.mit.edu/~rakhlin/publications.html Sasha Rakhlin]: MIT, Online Learning, Statistical Learning, Reinforcement Learning and Decision Making 
+- [https://jschnei.github.io/ Jon Schneider]: Google Research, the overlap between game theory and online learning.
+- [https://imgemp.github.io/index.html Ian Gemp]: DeepMind
+- [http://www.ganzfriedresearch.com/ Sam Ganzfried]: Independent researcher
+- [http://yiling.seas.harvard.edu/ Yiling Chen]: The interface between computer science and economics, lies in the emerging area of social computing, where human creativity and resources are harnessed for the purpose of computational tasks.
+- [http://www.cs.yale.edu/homes/cai/\#about Yang Cai]: Yale, Economics and Computation
+- [https://www.cs.columbia.edu/~binghuip/ Binghui Peng (彭炳辉)]: understanding learning and intelligence through the lens of computation
+- [https://cs.stanford.edu/~aviad/ Aviad Rubinstein]: Stanford, online algorithm, approximate algorithm, mechanism design, game theory.
+- [https://mzampet.com/ Manolis Zampetakis]: Yale, Theoretical Machine Learning, Statistics, Optimization, Computational Complexity, Game Theory, Mechanism Design
+- [https://www.cs.princeton.edu/~smattw/ Matt Weinberg]: Princeton, Game theory and algorithms under uncertainty
+- [http://www.cs.yale.edu/homes/wibisono/ Andre Wibisono]: Yale, design and analysis of algorithms for machine learning, in particular for problems in optimization, sampling, and game dynamics
+- [https://parkes.seas.harvard.edu/ David C. Parkes]: Harvard, Multi-agent AI, Bounded rationality, Machine learning and decisions
+- [https://cs.stanford.edu/people/ebrun/index.html Emma Brunskill]: Stanford, RL, Online Learning
+- [https://haipeng-luo.net/ Haipeng Luo]: online learning, reinforcement learning, learning in games, fast and scalable optimization methods, [https://haipeng-luo.net/courses/CSCI659/2022_fall/index.html Introduction to Online Optimization/Learning (Fall 2022)]
+- [https://simonshaoleidu.com/index.html Simon Shaolei Du (杜少雷)]
+- [https://faculty.cc.gatech.edu/~jabernethy9/ Jacob Abernethy]: University of Michigan, discovering connections between Optimization, Statistics, and Economics
+- [https://people.eecs.berkeley.edu/~nika Nika Haghtalab]: UC Berkeley, the mathematical foundation for learning and decision-making systems
+- [https://pages.stern.nyu.edu/~zzhou/index.html Zhengyuan Zhou]: New York University, data-driven decision-making problems.
+- [http://mlanctot.info/ Marc Lanctot]: DeepMind, general multiagent learning (and planning), computational game theory, reinforcement learning, and game-tree search.
+- [https://noambrown.github.io/ Noam Brown]: OpenAI
+- [https://tianyipeng.github.io/ Tianyi Peng]: Columbia, machine learning and causal inference algorithms for large-scale dynamic decision-making systems in the real world. 
+- [https://stephenbates19.github.io/index.html Stephen Bates]: MIT, understand uncertainty and reliable decision-making with data.
+- [https://madry.mit.edu/ Aleksander Mądry]: MIT, forge a decision-making toolkit that is reliable and well-understood enough to be safely and responsibly deployed in the real world.
+- [https://web.mit.edu/jaillet/www/ Patrick Jaillet]: MIT, Operation Research
+- [https://mraghavan.github.io/ Manish Raghavan]: MIT, online platforms, algorithmic fairness, and behavioral economics
+- [https://asu.mit.edu/ Asu Ozdaglar]: MIT, optimization, machine learning, economics, and networks
+- [http://www.mit.edu/~jnt/home.html	John N. Tsitsiklis]: MIT, Optimization and Game Theory, Systems Theory, Control, and Autonomy
+- [https://optml.mit.edu/index.html Suvrit Sra]: MIT, Optimization and Game Theory; [http://yutc.me/ Tiancheng Yu (余天呈)]
+- [http://www.columbia.edu/~ck2945/ Christian Kroer]: Columbia, a focus on how optimization and AI methods enable large-scale economic solution concepts
+- [http://timroughgarden.org/ Tim Roughgarden]
+- [https://www.charapodimata.com/ Chara Podimata]: MIT, mostly on the intersection of Theoretical Computer Science, Economics and Machine Learning and specifically on incentive-aware machine learning, social computing, online learning, and mechanism design. Recently, I have started thinking about policy questions related to AI and recommendation systems. 
+- [https://www.mit.edu/~golrezae/index.html Negin Golrezaei]: MIT, Statistical learning theory Mechanism design Optimization algorithms Game theory
+- [https://mraghavan.github.io/ Manish Raghavan]: MIT,  online platforms, algorithmic fairness, and behavioral economics 
+- [https://jgan.xyz/ Jiarui Gan]: computational game theory, and more broadly, in the fields of multi-agent systems, EconCS, and AI
+- [https://andcelli.github.io/publications.html Andrea Celli]: Bocconi University, online learning and computational game theory.
+- [https://adamwierman.com/ Adam Wierman]: Caltech, Sustainable Computing, Online Algorithms, Online Optimization, Stochastic Networks, Network Economics.
+- [http://www.columbia.edu/~srb2155/ Santiago R. Balseiro]: Columbia, mechanism design.
+- [http://www.cs.cmu.edu/~pradeepr/ Pradeep Ravikumar]: CMU, next-generation machine learning systems.
+- [https://zicokolter.com/ Zico Kolter]: CMU, making deep learning algorithms safer, more robust, and more explainable.
+- [http://www.cs.cmu.edu/~conitzer/ Vincent Conitzer]: CMU
+- [https://orc.mit.edu/people/students MIT Operations Research Center], [https://cse.mit.edu/programs/phd/dept-cse/ MIT Center for Computational Science and Engineering ], [https://mitadmissions.org/blogs/ MIT Admissions],
+[https://lids.mit.edu/people/faculty-pi MIT Laboratory for Information and Decision Systems], [https://idss.mit.edu/academics/ MIT Institute for Data, Systems, and Society], [https://www.eecs.mit.edu/role/faculty-aid/ MIT EECS], [http://www.mit.edu/research/centers-labs-programs/ Massachusetts Institute of Technology Laboratory], [https://www.eecs.mit.edu/people/?fwp_research=optimization-and-game-theory MIT Optimization and Game Theory faculty], 
+[https://www.eecs.mit.edu/academics/graduate-programs/graduate-program-requirements/ MIT graduate-program-requirements], [https://www.microsoft.com/en-us/research/event/msr-asia-theory-lecture-series/ MSR Asia Theory Lecture Series], [https://eecs-gaap.mit.edu/ MIT EECS GAAP],
+[http://hacks.mit.edu/Hacks/ MIT HACK]
+- [https://cs-sop.notion.site/CS-PhD-Statements-of-Purpose-df39955313834889b7ac5411c37b958d CS SOP]
+
+== Explainable Decision Making
+- [https://simons.berkeley.edu/workshops/causality-boot-camp/schedule Causality Boot Camp]
+- [https://lilianweng.github.io/tags/ Lilian Weng]: Lil’Log
+- [https://zstevenwu.com/index.html Steven Wu]: CMU, privacy, fairness, causal inference, RL, game theory
+- [https://feifang.info/ Fei Fang]: CMU, integrating machine learning with game theory. Her work contributes to the theme of AI for Social Good. [https://ryanzshi.github.io/ Ryan Shi]: research AI for nonprofits, with nonprofits, which is actually used by nonprofits. [https://stephmilani.github.io/ Stephanie Milani]: create intelligent agents that can learn quickly, explain their decisions, and work harmoniously with people and other artificially intelligent agents.
+- [https://people.eecs.berkeley.edu/~jordan/publications.html Michael I. Jordan]: UC Berkeley
+- [https://lily-x.github.io/ Lily Xu]: Machine learning and game theory applied to challenges in sustainability
+- [https://sidbanerjee.orie.cornell.edu/ Siddhartha Banerjee]: Cornell University, Associate Professor
+- [https://jasondlee88.github.io/index.html Jason D. Lee]: Princeton, Foundations of Deep Reinforcement Learning
+- [http://www0.cs.ucl.ac.uk/staff/jun.wang/ Jun Wang]
+- [https://danijar.com/ Danijar Hafner]: dreamer
+- [https://scholar.google.com/citations?user=PYtPCHoAAAAJ&hl=en&oi=ao Michael Bowling]: Deepstack
+- [http://dengji-zhao.net/ Dengji Zhao (赵登吉)]: algorithmic game theory and multi-agent systems, especially mechanism design and its applications on social networks
+- [https://www.yangyaodong.com/ Yaodong Yang (杨耀东)]: game theory, reinforcement learning and multi-agent systems
+- [https://cfcs.pku.edu.cn/english/people/faculty/xiaotiedeng/index.htm Xiaotie Deng (邓小铁)]: algorithmic game theory, blockchain, internet economy, online algorithms and parallel computing
+- [https://tianhaowang.netlify.app/ Jiachen T. Wang]:  Princeton, differential privacy and data valuation.
+
+== Famous People
+- [https://scholar.google.com/citations?hl=en&user=rQ68pVwAAAAJ Mark Newman]: Networks
+- [https://computing.mit.edu/martin-wainwright/ Martin Wainwright]: MIT, statistics
+- [https://people.csail.mit.edu/tommi/tommi.html Tommi S. Jaakkola]: MIT, ML
+- [http://people.csail.mit.edu/dina/index.html Dina Katabi]: MIT, Wireless and Mobile Systems
+- [http://people.csail.mit.edu/moitra/index.html Ankur Moitra]: MIT, give algorithms with provable guarantees for various problems in machine learning
+- [https://mraghavan.github.io/ Manish Raghavan]: MIT, the application of computational techniques to domains of social concern, including online platforms, algorithmic fairness, and behavioral economics
+- [http://people.csail.mit.edu/stefje/ STEFANIE JEGELKA]: MIT,  exploiting mathematical structure for discrete and combinatorial machine learning problems, for robustness and for scaling machine learning algorithms.
+- [https://songhan.mit.edu/ Song Han]: MIT, efficient deep learning computing；[https://lzhu.me/ Ligeng Zhu]
+- [https://jadbabaie.mit.edu/ Ali Jadbabaie]: MIT, investigates the behavior and evolution of complex interconnected systems
+
+- [https://www.cs.yale.edu/homes/ying-rex/ REX (ZHITAO) YING]: graph neural networks, geometric embeddings, explainable models, and more recently, multi-modal foundation models involving relational reasoning
+- [http://stat.wharton.upenn.edu/~suw/ Weijie Su (苏炜杰)]
+- [https://xingyuzhou.org/ Xingyu Zhou]: focus on bandits and reinforcement learning with a focus on differential privacy; [https://sites.google.com/view/ece7995/home Online Decision Making]
+- [https://gioramponi.github.io/ Giorgia Ramponi]: RL, privacy, online learning
+- [https://www.ehazan.com/ Elad Hazan]: online learning
+- [https://shishirpatil.github.io/ Shishir Patil]: Machine learning for the edge
+- [https://sites.google.com/view/jingzhao/home Jingzhao Zhang (张景昭)]
+- [https://home.ttic.edu/~omar/ Omar Montasser]: Yale, robust PAC learning 
+- Causal Inference: [http://bayes.cs.ucla.edu/jp_home.html Judea Pearl], [https://statistics.fas.harvard.edu/people/donald-b-rubin Donald B. Rubin]
+- [https://users.ece.cmu.edu/~yuejiec/index.html Yuejie Chi]: CMU ECE, [https://hewang.site/ He Wang]
+- [https://walterbabyrudin.github.io/course.html Jie Wang]:CUHK(SZ), optimization and statistics
+- [http://www.cse.cuhk.edu.hk/~cslui/ John C.S. Lui]: CUHK Professor, Online Machine Learning, Network Science and Economics
+- [http://liuchen1993.cn/HomePage/index.html Chen Liu]: deep neural networks and study it from an optimization perspective
+- Kolmogorov complexity: [https://cs.uwaterloo.ca/~mli/ Ming Li], [http://www.hutter1.net/ Marcus Hutter]
+- [https://kexue.fm/ (苏剑林)]
+- [https://truenobility303.github.io/posts/ Lesi Chen (陈乐偲)]: 优化博客
+- [https://zhengzhenzhe220.github.io/ Zhenzhe Zheng (郑臻哲)]: SJTU, Mobile Computing and On-device Machine Learning, Network Economics and Online Advertising
+- [https://www.james-zou.com/ james-zou]: Stanford Assistant Professor, [https://lchen001.github.io/index.html Lingjiao Chen], [https://cs.stanford.edu/~shirwu/ Shirley Wu]
+- [https://cs-sop.org/ CS PhD Statements of Purpose], [https://nsidn98.github.io/posts/2020/06/grad_school/ How I got into Graduate School]
+- [https://www.cse.msu.edu/~tangjili/index.html Jiliang Tang (汤继良)]
+- [https://cfcs.pku.edu.cn/news/index.htm 北京大学前沿计算中心]
+- [https://bicmr.pku.edu.cn/~wenzw/index.html Zaiwen Wen (文再文)]
+- [https://jcaip.github.io/tags/ Jesse Cai]
+- [https://people.ucas.ac.cn/~xdhu Xudong HU (胡旭东)]
+- [http://www.yao-liu.com/ Yao Liu (刘垚)]
+- [https://bicmr.pku.edu.cn/~dongbin/Teaching.html Bin Dong (董彬)]
+- [http://www.nlpr.ia.ac.cn/cn/column/22.html NLPR (模式识别国家重点实验室)]
+- [https://fangmingliu.github.io/publications/ Fangming Liu (刘方明)]
+- [https://jeffe.cs.illinois.edu/ Jeff Erickson]
+- [http://qszhang.com/ Quanshi Zhang (张拳石)]
+- [http://hliangzhao.me/ Hailiang Zhao (赵海亮)] 
+- [https://yfzhang114.github.io/ Yi-Fan Zhang (张一帆)]:自动化所, Causal Inference, Out of Distribution Generalization, Domain Adaptation
+- [https://chenchongthu.github.io/ Chong Chen (陈冲)]
+- [https://www.yuchen.xyz/categories/ Yuchen Shi (史雨晨)]
+- [https://www.mhchen.com/advice.html Minghua Chen]
+- [http://www.mit.edu/~baek/ Jackie Baek (公平)]
+- [https://sunju.org/research/nonconvex/ Ju Sun (非凸优化)]
+- [https://boleizhou.github.io/ Bolei Zhou (周博磊)]
+- [https://hongyanz.github.io/ Hongyang Zhang (张弘扬)]
+- [https://speech.ee.ntu.edu.tw/~hylee/index.php HUNG-YI LEE (李宏毅)] 
+- [http://jyywiki.cn/ (蒋炎岩)], [https://jyywiki.cn/Reading_List.md 科研入门的书籍\/在线课程\/论文的推荐列表], [https://mmlab-iie.github.io/course/ (科研与英文学术论文写作指南)], [https://www.ruanyifeng.com/blog/ (阮一峰的网络日志)], [https://www.cnblogs.com/pinard/ 刘建平], [https://www.liaoxuefeng.com/ 基础知识入门 (廖雪峰)] 
+
+== People who got their B.S. degree from Sun Yat-Sen University 
+
+- [https://magickd.github.io/ Canhui Chen (陈灿辉)]
+- [https://ling-pan.github.io/ Ling Pan (潘玲)]
+- [http://people.iiis.tsinghua.edu.cn/~huang/index.html Longbo Huang (黄隆波)]
+- [https://chhzh123.github.io/ Hongzheng Chen (陈鸿峥)]
+- [https://wu-kan.cn/archive/ Kan Wu (吴坎)]
+- [https://wangtl175.github.io/ Tianlong Wang (王天龙)]
+- [https://2wildkids.com/ Zhihong Deng (邓智鸿)]  
+- [https://github.com/warpmatrix/se-in-sysu Yunkai Liang (梁允楷)]
+- [https://wdxtub.com/about/ dawang (小土刀)] 
+- [http://www.brandonye.tech/ Shengyuan Ye (叶盛源)]
+- [https://acomze.github.io/ Liekang Zeng (曾烈康)]
+- [https://howardlau.me/about Haohua Liu] 
+- [https://huangxt.com/ Xuanteng Huang (黄軒騰)] 
+- [https://luomai.github.io/author/yao-fu/ Yao Fu(符尧)]
+- [https://youzhi333.github.io/index.html Youzhi Zhang]，安波学生
+- [https://sites.google.com/view/zhenyuhu/home Zhenyu Hu]: the National University of Singapore, pricing, Game theory
+- [https://shawnli.me/ Xiang Li (李响)], [https://odi.inf.ethz.ch/niaohe Niao He], ETH Zurich
+
+== People who got their B.S. degree from Tsinghua University
+
+- [https://people.iiis.tsinghua.edu.cn/~fang/ Zhixuan Fang (房智轩)]
+- [https://qingsong-liu.github.io/ Qingsong Liu]: Constrained Online Learning, Multi-agent Online Learning, Online Learning in Computer Systems and Communication Networks
+- [https://whxwhx.github.io/ Hongxun Wu (IIIS)]
+- [https://wu-ys.github.io/ wu-ys (IIIS)], [https://wu-ys.github.io/courses/game-theory/midterm-cheatsheet.html 笔记]
+- [https://fengshi.link/ Shi Feng (IIIS)]: algorithmic game theory, online learning, and social networks
+- [https://chen-lijie.github.io/ Lijie Chen (陈立杰)]
+- [https://www.haikexu.com/ Haike Xu (徐海珂)], IIIS, MIT
+- [https://kunheyang.com/ Kunhe Yang (杨坤禾)], IIIS
+- [https://yanjunhan2021.github.io/index.html Yanjun Han (韩衍隽)]
+- [https://sites.google.com/site/acmonsterqiao/home Mingda Qiao (乔明达)]: Theoretical aspects of prediction, learning, and decision-making in online settings
+- [https://group.iiis.tsinghua.edu.cn/~stu/seminar/events/ IIIS seminar]
+- [https://harrychen.xyz/resume/zh-cn/ Shengqi Chen (陈晟祺)]
+- [https://laekov.com.cn laekov]
+- [http://hqin.mit.edu/ Hanzhang Qin (覃含章)]
+- [https://trinkle23897.github.io/archive Jiayi Weng (翁家翌)]
+- [https://drustz.com/ Mingrui Zhang (张明瑞)], [https://zhang-ming-rui.gitbook.io/when-rocket-launches/ Blog] 
+- [https://youkaichao.github.io/research Kaichao You (游凯超)]
+- [https://survivesjtu.gitbook.io/survivesjtumanual/li-zhi-pian/zheng-que-di-lang-fei-sheng-xia-de-shi-jian (上海交通大学生存手册)]
+- [https://csdiy.wiki/ (北大信科自学指南)], [https://nju-projectn.github.io/ics-pa-gitbook/ics2021/index.html (南京大学计算机系统基础)], [https://hansimov.gitbook.io/csapp/ (深入理解计算机系统中文版)], [https://blog.poetries.top/browser-working-principle/ 浏览器工作原理与实践]
+- [https://zhaochenyang20.github.io/link/ 友链]
+- [https://franklinferdinand.github.io/ BY (Blog)] 
+- [https://www.unidy.cn/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/ UNIDY (Blog)]
+- [https://github.com/MashPlant/undergraduate_projects/tree/master/%E7%AC%94%E8%AE%B0%E6%89%AB%E6%8F%8F 课程笔记]
+- [https://byvoid.com/zht/blog/ 旅行日记]
+
+== FOCS, STOC, SODA, COLT
+
+- [https://www.cs.huji.ac.il/~shais/ Shai Shalev-Shwartz]: Machine Learning algorithms, Online Learning and Online Convex Optimization
+- [http://sbubeck.com/index.html Sébastien Bubeck]: Machine Learning Foundations, Microsoft Research
+- [https://stevehanneke.com/ Steve Hanneke]: the statistical analysis of machine learning
+- [https://cs.nyu.edu/~mohri/ Mehryar Mohri (森)]: Foundations of Machine Learning.
+- [https://www.idanattias.com/ Idan Attias]: theoretical machine learning, and its intersection with game theory, optimization, statistics and private data analysis.
+- [http://www.lamda.nju.edu.cn/zhaop/ Peng Zhao]: Machine Learning in Open and Non-stationary Environments, [http://www.lamda.nju.edu.cn/zhaop/course/AOpt2022.html Advanced Optimization (2022 Fall)]
+- [https://www.tcs-lab.com/zh/ 华为理论计算机实验室]
+- [https://disk.pku.edu.cn/\#/link/5AC7A6EFC0F1205B20C1883AD4B0168F%E2%80%8B (优化理论)]
+- [https://ins.sjtu.edu.cn/people/xuzhiqin/ Zhi-Qin John Xu (许志钦)], [https://github.com/xuzhiqin1990/understanding_dl/tree/main understanding dl]
+- [https://kli-casia.github.io/ (自动化所李凯老师)]
+- [https://tcs.nju.edu.cn/wiki/index.php?title=%E9%AB%98%E7%BA%A7%E7%AE%97%E6%B3%95_(Fall_2022) 南京大学高级算法 (Fall 2022)]
+- [https://www.cs.utexas.edu/~shuchi/ SHUCHI CHAWLA], [https://pages.cs.wisc.edu/~shuchi/courses/880-F19/ approximation and online algorithms], [https://pages.cs.wisc.edu/~shuchi/courses/880-F20/index.html algorithmic mechanism design]
+- [https://pages.cs.wisc.edu/~jyc/ Jin-Yi Cai (蔡进一)]
+- [https://www.boazbarak.org/ Boaz Barak]: Harvard University
+- [https://yangpliu.github.io/research.html Yang Liu]
+- [https://cnchou.github.io/resources/ Chi-Ning Chou (周紀寧)]
+- [http://pinyanlu.com/ Pinyan Lu (陆品燕)], [https://itcs.sufe.edu.cn/LlChinese/ ITCS (理论计算机科学研究中心)], [http://zhihaotang.com/ Zhihao Gavin Tang(唐志皓)], [http://fuhuthu.com/ Hu Fu (伏虎)], [https://logic.pdmi.ras.ru/~gravin/ Nick Gravin]
+- [https://yanglin2021.github.io/ Lin Yang]: 南京大学, online learning
+- [https://i.cs.hku.hk/~zhiyi/index.html Zhiyi Huang(黄志毅)]
+- [http://people.csail.mit.edu/zeyuan/publications.htm Zeyuan Allen-Zhu (朱泽园)] 
+- [https://personal.ntu.edu.sg/xhbei/ Xiaohui Bei]: fairness
+- [http://www.zyhwtc.com/ Yuhao Zhang (张宇昊)]
+- [https://www.haifeng-xu.com/sigma/pub.html Sigma Lab]
+- [http://tcs.nju.edu.cn/yinyt/ Yitong Yin (尹一通)]
+- [https://chaoxuprime.com/ Chao Xu (许超)], [https://coauthor.tcsuestc.com/Public Problem]
+- [https://iiis.tsinghua.edu.cn/research (姚班科研简报)], [https://group.iiis.tsinghua.edu.cn/~stu/seminar/events/ IIIS Seminar]
+- [https://people.orie.cornell.edu/bzj3/index.html Billy Jin]
+- [https://viterbi-web.usc.edu/~mjneely/ Michael J. Neely]
+- [https://web.stanford.edu/~sidford/ Aaron Sidford]
+- [https://ai.nju.edu.cn/zlj/index.htm Lijun Zhang  (张利军)]
+- [https://zhouchenlin.github.io/ Zhouchen Lin (林宙辰)]
+- [http://people.iiis.tsinghua.edu.cn/~jianli/ Jian Li (李建)], [http://people.iiis.tsinghua.edu.cn/~jianli/paper-cat.htm paper]
+- [http://www.liweiwang-pku.com/index-cn.html Liwei Wang (王立威)]
+- [https://tianle.website/ Tianle Cai (蔡天乐)]
+- [https://www.csie.ntu.edu.tw/~htlin/ Hsuan-Tien Lin (林轩田)], [https://github.com/RedstoneWill/HsuanTienLin_MachineLearning HsuanTienLin_MachineLearning github]
+- [https://datawhalechina.github.io/key-book/ (钥匙书) ]
+- [https://github.com/roboticcam/machine-learning-notes 机器学习，概率模型和深度学习的讲义(2000+页)和视频链接]  
+- [http://web.mit.edu/haihao/www/index.html Haihao (Sean) Lu]
+- [http://ai.stanford.edu/~tengyuma/ Tengyu Ma (马腾宇)]
+- [https://statml.hkust.edu.hk/ Tong Zhang (张潼)]
+- [https://tianyuanjin.github.io/index.html Tianyuan Jin], Online Learning and Bandits, Submodularity, and Graph Algorithms
+- [https://mengxiaoz.github.io/ Mengxiao Zhang (张梦晓)]: Online learning and bandits
+- [http://people.iiis.tsinghua.edu.cn/~yuanyang/index.html yuanyang (袁洋)], [https://www.tengjiaye.com/ Jiaye Teng (滕佳烨)]，[https://www.tengjiaye.com/generalization.html Generalization Theory]
+- [https://www.andrew.cmu.edu/user/yuanzhil/ Yuanzhi Li]: Assistant Professor in the Machine Learning Department at CMU, working on Deep Learning (Theory).
+
+
+
+== Economics
+
+- [http://www.sef.hku.hk/~wsuen/teaching/topics/index.html  Selected Topics in Microeconomics]
+- [http://zhentaoshi.github.io/teaching Zhentao Shi (史震涛)]
+- [https://weihe.weebly.com/research.html Wei He (何暐)]: Mechanism Design
+- [https://mp.weixin.qq.com/s/IKADlyPvXnAEIeqSKPLK0w difference-in-difference], [https://mp.weixin.qq.com/s/VxSJwbwPRC8vDb_fiR194g synthetic control method]
+- [https://web.stanford.edu/~jacksonm/ Matthew O. Jackson]: Stanford, network, game theory
+- [https://sites.google.com/site/quaerereverum9/home Rakesh Vohra]: University of Pennsylvania, mechanism design
+- [https://gsb-faculty.stanford.edu/robert-wilson/ Robert Wilson]: Stanford
+- [https://milgrom.people.stanford.edu/ Paul Milgrom]: Stanford
+- [https://people.csail.mit.edu/mirrokni/Welcome.html vahab mirrokni], [https://sites.google.com/view/songzuo Song Zuo], [https://sites.google.com/view/yuandeng/home Yuan Deng (邓原)]

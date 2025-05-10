@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>GNN</title>
+<style type="text/css">
+.abs {
+ background-color: #eefaff;
+ color: #202020;
+ max-width: auto;
+ border: 1px solid #dddddd;
+ padding: 7px;
+ display: none;
+}F
+li{
+    margin-top: 10px;
+}
+li:first-child {
+    margin-top:0;
+}
+</style>
+<script type="text/javascript">
+function showAbstract(e){
+   var div;
+   for(div = e.nextSibling; div.className != "abs"; div = div.nextSibling);
+   if (div.style.display=="block"){
+     div.style.display="";
+   } else {
+     div.style.display="block";
+   }
+   return true;
+}
+</script>
+<script>
+	function toggle(pId) {
+	var e=document.getElementById(pId);
+	if (!e) return;
+	if (e.style.display == "none") {
+		e.style.display = "block"
+	} else {
+		e.style.display = "none"
+	}
+	return;
+	}
+</script>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+<link rel="icon" type="image/x-icon" href="./pictures/monster-icons/ICO/kidaha-02.ico" >
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Huaiguang Cai</div>
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-item"><a href="Link.html">Link</a></div>
+<div class="menu-category">Idea</div>
+<div class="menu-item"><a href="GT.html">Game&nbsp;Theory</a></div>
+<div class="menu-item"><a href="OD.html">Online&nbsp;Decision</a></div>
+<div class="menu-item"><a href="LLM_RL.html">LLM&nbsp;and&nbsp;RL</a></div>
+<div class="menu-category">Record</div>
+<div class="menu-item"><a href="Paper_Daily.html">Paper&nbsp;Daily</a></div>
+<div class="menu-item"><a href="Summary.html">Summary</a></div>
+<div class="menu-item"><a href="Talk.html">Talk</a></div>
+<div class="menu-category">Material</div>
+<div class="menu-item"><a href="Linux.html">Linux</a></div>
+<div class="menu-item"><a href="English.html">English</a></div>
+<div class="menu-item"><a href="Math.html">Math</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>GNN</h1>
+<div id="subtitle">
+</div>
+</div>
+<h2>Idea</h2>
+<ul>
+<li><p>图的邻接矩阵能不能看做是渐进变化的？就是一个图一开始有点性质，然后这个性质慢慢发展，得到了现阶段的图。而不是现在这样直接拿图来使用。感觉有点像图的傅里叶变化。
+</p>
+</li>
+<li><p><a href="https://muhanzhang.github.io/" target=&ldquo;blank&rdquo;>Muhan Zhang (张牧涵)</a>
+</p>
+</li>
+<li><p><a href="http://weizhewei.com/" target=&ldquo;blank&rdquo;>Zhewei Wei (魏哲巍)</a>
+</p>
+</li>
+<li><p>负采样方法和GCN的PairNorm之间的关系，KMBPR可否转换为等价的PairNorm？
+</p>
+</li>
+<li><p>BPR做的是反向传播中拉宽不邻接的节点距离，同时拉进邻接的节点，GCN做的前向传播时是拉进邻接的节点距离，间接拉宽不邻接的节点距离。PairNorm同时提出了这两点。能否去掉反向传播，用类似于迭代或者计算的方式得到embedding?
+</p>
+</li>
+<li><p>优化网络结构被证明是可行的，中科院自动化所张兆翔老师的一系列工作可以参考，汤继良组的L1范数的GCN可否变成一个网络结构——优化过程变成网络结构
+</p>
+</li>
+<li><p>三元组负采样方法 BPR、KMBPR中的K能不能以更概率的方式描述它，最好建立起其范围的理论
+</p>
+</li>
+<li><p>BPR随机挑选负样本，实际上和GCN多层聚合是有矛盾的（朋友的朋友更有可能是朋友，但BPR未把这些考虑进去）
+</p>
+</li>
+<li><p>可以通过算熵来衡量分布的异构性
+</p>
+</li>
+<li><p>GCN要考虑类似于马尔科夫链中的class，看看能不能处理冷启动问题
+</p>
+</li>
+<li><p>BGCN看能不能从马尔科夫性来建模，看能不能用马尔科夫+某种到达分布来算出系数。
+</p>
+</li>
+<li><p>类似于库存轮中对市场预测变化不敏感的情况，我们可以将神经网络作为预测的功能，再接一个对预测不敏感的模块，这样实现了智能和理论性还有鲁棒性。
+</p>
+</li>
+<li><p>LightGCN两方面：一是GCN的聚类，二是BPR的远离。这与杨猛老师的人脸识别的论文（正弦定理）那一偏内在逻辑是相同的，看能不能通过用文章的原理导出GCN归一化层（PairNorm那样）
+或者找到理论依据。
+</p>
+</li>
+<li><p>可以从GCN压缩角度来考虑此问题。
+</p>
+</li>
+<li><p>借助newman那篇message passing 文章的渗流理论，和因果推断中无偏估计，完善一下idea。
+</p>
+</li>
+<li><p>GNN 的多层看作是信息传播（Message Passing）的过程，有些信息传播远，有些近，因此便不能一视同仁地传播几层。最开始的节点信息可以就是早些时候的信息源，随着传播发展到了现在的信息，接着就可以预测未来的信息。
+</p>
+</li>
+<li><p>图上使用SIFT 捕捉不同尺度的message传播（现在GNN一般都是多层，有点像多尺度金字塔），还有小波变化、维纳滤波等图像处理里提到的内容
+</p>
+</li>
+<li><p>GNN+NMF，其中每个隐向量按照topic model的方式生成，更加进一步地融合GNN和非负矩阵分解的模型；具体来说每个topic都在网络中传播，都对应着一个GNN（但是传播层数可能不一样）。
+</p>
+</li>
+<li><p>基于online learning的推荐系统：将用户购买过的每个物品当做专家，专家会预测用户购买另一个物体的概率，用户采用Hedge算法集成专家意见。 
+</p>
+</li>
+<li><p>可解释性推荐系统：利用shap加图神经网络那种线性的算法应该可以算出点什么，同时可以完成解释的任务。
+</p>
+</li>
+<li><p>shapley value的删除操作和GNN中的random drop 可以联系起来，但是计算量太大了。
+</p>
+</li>
+<li><p>我的SHAPIS算法可能可以和GNN思想结合起来导出新的可信GNN结构。
+</p>
+</li>
+</ul>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

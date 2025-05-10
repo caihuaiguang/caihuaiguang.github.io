@@ -1,0 +1,998 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Paper Daily</title>
+<style type="text/css">
+.abs {
+ background-color: #eefaff;
+ color: #202020;
+ max-width: auto;
+ border: 1px solid #dddddd;
+ padding: 7px;
+ display: none;
+}F
+li{
+    margin-top: 10px;
+}
+li:first-child {
+    margin-top:0;
+}
+</style>
+<script type="text/javascript">
+function showAbstract(e){
+   var div;
+   for(div = e.nextSibling; div.className != "abs"; div = div.nextSibling);
+   if (div.style.display=="block"){
+     div.style.display="";
+   } else {
+     div.style.display="block";
+   }
+   return true;
+}
+</script>
+<script>
+	function toggle(pId) {
+	var e=document.getElementById(pId);
+	if (!e) return;
+	if (e.style.display == "none") {
+		e.style.display = "block"
+	} else {
+		e.style.display = "none"
+	}
+	return;
+	}
+</script>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+<link rel="icon" type="image/x-icon" href="./pictures/monster-icons/ICO/kidaha-02.ico" >
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Huaiguang Cai</div>
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-item"><a href="Link.html">Link</a></div>
+<div class="menu-category">Idea</div>
+<div class="menu-item"><a href="GT.html">Game&nbsp;Theory</a></div>
+<div class="menu-item"><a href="OD.html">Online&nbsp;Decision</a></div>
+<div class="menu-item"><a href="LLM_RL.html">LLM&nbsp;and&nbsp;RL</a></div>
+<div class="menu-category">Record</div>
+<div class="menu-item"><a href="Paper_Daily.html" class="current">Paper&nbsp;Daily</a></div>
+<div class="menu-item"><a href="Summary.html">Summary</a></div>
+<div class="menu-item"><a href="Talk.html">Talk</a></div>
+<div class="menu-category">Material</div>
+<div class="menu-item"><a href="Linux.html">Linux</a></div>
+<div class="menu-item"><a href="English.html">English</a></div>
+<div class="menu-item"><a href="Math.html">Math</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Paper Daily</h1>
+<div id="subtitle">聪明人硬是要下笨功夫
+</div>
+</div>
+<p>
+</p>
+<table id="TABLENAME">
+<tr class="r1"><td class="c1">Finished?   </td><td class="c2">Date        </td><td class="c3">Conference or Journal            </td><td class="c4"> First Author from                 </td><td class="c5">Title                                                                                     </td></tr>
+<tr class="r2"><td class="c1">Yes     </td><td class="c2">2023.02.24  </td><td class="c3">CVPR 2022                        </td><td class="c4">   ETH Zurich                      </td><td class="c5">  Continual Test-Time Domain Adaptation                                                   </td></tr>
+<tr class="r3"><td class="c1"> Yes     </td><td class="c2">2023.02.25  </td><td class="c3">ICML 2022                        </td><td class="c4">   Tencent AI Lab                  </td><td class="c5">  Efficient Test-Time Model Adaptation without Forgetting                                 </td></tr>
+<tr class="r4"><td class="c1">Yes     </td><td class="c2">2023.02.26  </td><td class="c3">计算机学报 2023                  </td><td class="c4">          东北大学                  </td><td class="c5">  能耗优化的神经网络轻量化方法研究进展                                                      </td></tr>
+<tr class="r5"><td class="c1">Yes     </td><td class="c2">2023.02.28  </td><td class="c3">     IJCV 2008                   </td><td class="c4">   UW                              </td><td class="c5">  Modeling the World from Internet Photo Collections                                      </td></tr>
+<tr class="r6"><td class="c1">Yes     </td><td class="c2">2023.03.01  </td><td class="c3">    CVPR 2021                    </td><td class="c4">     CASIA                         </td><td class="c5"> SCF-Net: Learning Spatial Contextual Features for Large-Scale Point Cloud Segmentation   </td></tr>
+<tr class="r7"><td class="c1">Yes     </td><td class="c2">2023.03.02  </td><td class="c3">    EC 2022                      </td><td class="c4">     Cornell University            </td><td class="c5"> Preference Dynamics Under Personalized Recommendations                                   </td></tr>
+<tr class="r8"><td class="c1">Yes     </td><td class="c2">2023.03.03  </td><td class="c3">    TIFS 2018                    </td><td class="c4">    CASIA                          </td><td class="c5"> A Light CNN for Deep Face Representation With Noisy Labels                               </td></tr>
+<tr class="r9"><td class="c1">Yes     </td><td class="c2">2023.09.12  </td><td class="c3">    COLT 1996                    </td><td class="c4">     AT&amp;T                          </td><td class="c5"> Game theory, on-line prediction and boosting                                             </td></tr>
+<tr class="r10"><td class="c1"> Yes     </td><td class="c2">2024.06.01  </td><td class="c3">    ICML 2008                    </td><td class="c4">    CMU                            </td><td class="c5">   No-Regret Learning in Convex Games                                                     </td></tr>
+<tr class="r11"><td class="c1">Yes     </td><td class="c2">2024.06.02  </td><td class="c3">    COLT 2003                    </td><td class="c4">   Brown University                </td><td class="c5">   A General Class of No-Regret Learning Algorithms and Game-Theoretic Equilibria         </td></tr>
+<tr class="r12"><td class="c1">Yes     </td><td class="c2">2024.06.03  </td><td class="c3">    COLT 2011                    </td><td class="c4">UC Berkeley                        </td><td class="c5">   Blackwell Approachability and No-Regret Learning are Equivalent                        </td></tr>
+<tr class="r13"><td class="c1">Yes     </td><td class="c2">2024.06.06  </td><td class="c3">    AAAI 2021                    </td><td class="c4">       CMU     </td><td class="c5">  Faster Game Solving via Predictive Blackwell Approachability: Connecting Regret Matching and Mirror Descent </td></tr>
+<tr class="r14"><td class="c1"></td><td class="c2">2024.06.05  </td><td class="c3">                                 </td><td class="c4">                                   </td><td class="c5">                                                                                          </td></tr>
+<tr class="r15"><td class="c1"></td><td class="c2">            </td><td class="c3">                                 </td><td class="c4">                                   </td><td class="c5">                                                                                          
+</td></tr></table>
+<p>
+</p>
+<h2>Faster Game Solving via Predictive Blackwell Approachability: Connecting Regret Matching and Mirror Descent</h2>
+<p>
+A really interesting paper. 
+</p>
+<p>
+The parameter-dependent algorithms (FTRL, OMD) are linked to the parameter-free algorithms (RM, RM\(^+\)) through the Blackwell approachability algorithm.
+</p>
+<p>
+The appendix provides an excellent introduction to some valuable regret analysis tricks.
+</p>
+<p>
+</p>
+<h3>Q1 What problem is the paper trying to solve?</h3>
+<p>
+Investigate the relationship between the leading online convex learning algorithms (such as FTRL and OMD) and the predominant algorithms for equilibrium finding (such as RM and RM\(^+\)). 
+</p>
+<p>
+Utilize the underlying translation method to develop predictive variants of RM and RM\(^+\) based on the predictive variants of FTRL and OMD. 
+</p>
+<p>
+The regret analysis results for predictive FTRL and OMD can also be applied to the regret analysis of predictive RM and RM\(^+\).
+</p>
+<p>
+</p>
+<h3>Q2 Is this a new problem?</h3>
+<p>No.
+</p>
+<p>
+</p>
+<h3>Q3 What scientific hypothesis is this article trying to test?</h3>
+<p>
+The framework of the Blackwell approachability game may be stronger than previously thought.
+</p>
+<p>
+</p>
+<h3>Q4 What are the relevant studies? How do you classify it? </h3>
+<p>
+</p>
+<ul>
+<li><p>Predictive online learning algorithm: involving the correctness of predictive loss to algorithm design and analysis.
+</p>
+</li>
+<li><p>Blackwell Approachability Therem: See &lsquo;&lsquo;Blackwell Approachability and No-Regret Learning are Equivalent&rsquo;&rsquo;, &lsquo;&lsquo;A General Class of No-Regret Learning Algorithms and Game-Theoretic Equilibria&rsquo;&rsquo;,
+and &lsquo;&lsquo;No-Regret Learning in Convex Games&rsquo;&rsquo;.
+</p>
+</li>
+</ul>
+<p>
+</p>
+<h3>Q5 What is the key to the solution mentioned in the paper?</h3>
+<p>
+RM and RM\(^+\) are the algorithms that result from running FTRL and OMD as a Blackwell approachability algorithm in the underlying Blackwell approachability game.
+</p>
+<p>
+</p>
+<h3>Q6 How is the experiment in the paper designed?</h3>
+<p>
+Running the predictive RM\(^+\) (or Predictive CFR\(^+\), using the closest loss as the predictive loss and quadratic averaging of the strategy) on 18 common zero-sum extensive-form games.
+And then compare the Nash gap of different algorithms (including CFR\(^+\), Discounted CFR, and Linear CFR).
+</p>
+<p>
+</p>
+<h3>Q7 What datasets are used for quantitative evaluation? Is the code open source?</h3>
+<p>
+18 common zero-sum extensive-form games.
+</p>
+<p>
+The code is not attached.
+</p>
+<p>
+</p>
+<h3>Q8 Do the experiments and results in the paper well support the scientific hypothesis that needs to be tested?</h3>
+<p>
+Yes. The regret analysis of Predictive RM\(^+\) demonstrates that the regret can be significantly reduced when the predictive loss is accurate. 
+The experimental results indicate that Predictive CFR\(^+\) outperforms CFR\(^+\) and linear CFR consistently, though Discounted CFR also performs comparably in some scenarios, particularly in poker games.
+</p>
+<p>
+Additionally, the ablation results highlight that the quadratic averaging method greatly enhances the performance of Predictive CFR\(^+\), an improvement not observed in CFR\(^+\).
+</p>
+<p>
+</p>
+<h3>Q10 What's next? Is there any further work to be done?</h3>
+<p>
+</p>
+<ul>
+<li><p>Further investigation is needed to understand why the quadratic averaging method is effective for Predictive CFR\(^+\), supported by evidence from regret analysis.
+</p>
+</li>
+<li><p>Can PRM\(^+\) guarantee \(T^{-1}\) convergence on matrix games like optimistic FTRL and OMD, or do the less stable updates prevent that? 
+</p>
+</li>
+<li><p>Can one develop a predictive variant of DCFR, which is faster on poker domains? 
+</p>
+</li>
+<li><p>Can one combine DCFR and PCFR\(^+\), so DCFR would be faster initially but PCFR\(^+\) would overtake? 
+</p>
+</li>
+</ul>
+<p>
+</p>
+<h2>Blackwell Approachability and No-Regret Learning are Equivalent</h2>
+<p>
+This paper is well-written and easy to follow.
+The authors dedicate substantial space to gradually transitioning from the familiar, scalar-focused Von Neumann's Minimax Theorem to the less familiar, 
+vector-focused Blackwell's Approachability Theorem, making the subsequent exploration of Blackwell's theorem feel very natural.
+</p>
+<p>
+The Blackwell Approachability Theorem was used to imply a no-regret algorithm's existence (and corresponding condition) for vector payoffs.
+Its use might help create other efficient algorithms for different problems.
+</p>
+<p>
+</p>
+<p>
+</p>
+<h3>Q1 What problem is the paper trying to solve?</h3>
+<p>
+Blackwell approachability algorithms are algorithmically equivalent to online linear optimization algorithms. 
+An approachability problem over a convex cone \(K\) can be reduced to an online linear optimization instance where we must &lsquo;&lsquo;learn&rsquo;&rsquo; within the polar cone \(K^0\). The reverse direction is similar.
+</p>
+<p>
+</p>
+<h3>Q2 Is this a new problem?</h3>
+<p>No.
+</p>
+<p>
+</p>
+<h3>Q4 What are the relevant studies? How do you classify it? </h3>
+<ol>
+<li><p>Game theory: Von Neumann's Minimax Theorem is used for scalar payoffs of a one-shot game, and if a similar theorem exists for vector payoffs (i.e. when a player wants to satisfy the target space \(S\)
+but the adversary wants to prevent the player from satisfying \(S\))?
+The answer is No! The authors give a simple example and then introduce the Blackwell Approachability Theorem to answer the situation of vector payoffs in repeated games.
+</p>
+</li>
+<li><p>Online convex optimization. It provided a generic problem template and was shown to generalize several existing problems in online learning and repeated decision-making. 
+</p>
+</li>
+</ol>
+<p>
+</p>
+<p>
+</p>
+<h3>Q5 What is the key to the solution mentioned in the paper?</h3>
+<p>
+The use of cone and Lemma 13. The key solution lies in Theorem 16 and 17.
+</p>
+<p>
+When OLO is reduced to an Approachability problem, the construction of the utility function is interesting.  
+</p>
+<p>
+When the Approachability problem is reduced to OLO, the additional use of a valid halfspace oracle is notable.
+This is because the satisfiability property of \(S\) in a Blackwell approachability game exists if and only if a forcing action exists for any halfspace \(H\supseteq S\). 
+However, this condition may be too stringent and lacks insight into algorithm design. 
+Surprisingly, the authors discovered that employing an online linear optimization method to determine which halfspace to force at each time step can also satisfy this property.
+</p>
+<p>
+</p>
+<h3>Q10 What's next? Is there any further work to be done?</h3>
+<ol>
+<li><p>Use the Blackwell Approachability Algorithm to explore algorithms for computing equilibrium in multi-player.
+</p>
+</li>
+<li><p>Efficient algorithm for the online learning algorithm.
+</p>
+</li>
+<li><p>What's the approachability theorem corresponding to the online convex algorithm?
+</p>
+</li>
+</ol>
+<p>
+</p>
+<h2>A General Class of No-Regret Learning Algorithms and Game-Theoretic Equilibria</h2>
+<p>This paper is well-written but still hard to follow. I'm unfamiliar with some technical details such as martingale used to prove the generalization of the Blackwell Approachability Theorem,
+and some real analysis parts such as almost sure converge and language to describe probability space. And some math language is a little different from that used today.
+</p>
+<p>
+However, all the technical results and mathematical parts are strictly defined, convincing, and self-contained. 
+Appendix A, which provides proof of the generalization version of the Blackwell Approachability Theorem using martingale and measure theory, is also a good resource for learning some basic math.
+</p>
+<p>
+</p>
+<h3>Q1 What problem is the paper trying to solve?</h3>
+<p>The author tries to explore the relationship between no-regret learning and game-theoretic equilibrium.
+</p>
+<p>
+</p>
+<h3>Q2 Is this a new problem?</h3>
+<p>No.
+</p>
+<p>
+</p>
+<h3>Q3 What scientific hypothesis is this article trying to test?</h3>
+<p>
+Each player \(i\) plays according to a learning algorithm that exhibits no-\(\Phi_i\)-regret <b>if and only if</b> 
+the empirical distribution of joint play converges to \(\langle \Phi_i\rangle_{i\in N}\)-equilibrium in matrix game.
+</p>
+<p>
+</p>
+<h3>Q5 What is the key to the solution mentioned in the paper?</h3>
+<p>
+This paper's logical chain is like this:
+</p>
+<ol>
+<li><p>The authors first use the regret of each action to measure the performance of an online algorithm, and then the utility function is a vector other than a normal scaler.
+Then the purpose of the online algorithm is to make regrets approach the target vector space.
+</p>
+</li>
+<li><p>To study the approaching problem (section 3), the authors generalize the Blackwell approachability theorem by relaxing the assumption of &ldquo;finite actions of opponents&rdquo;.
+They use Jafari's generalization theorem to prove the <b>existence of a no-\(\Phi_i\)-regret algorithm</b>: any algorithm that can compute the fixed point related to \(\Phi_i\).
+In other words, the construction process of a no-\(\Phi\)-regret algorithm actually lies in the condition of the Blackwell approachability theorem.
+</p>
+</li>
+<li><p>The authors define the concept of \(\langle \Phi_i\rangle_{i\in N}\)-equilibrium and show the equivalence (Theorem 12) of no-\(\Phi_i\)-regret and \(\langle \Phi_i\rangle_{i\in N}\)-equilibrium using the definition.
+</p>
+</li>
+<li><p>The authors also append other interesting results, such as the set of \(\langle \Phi_i\rangle_{i\in N}\)-equilibria is convex,
+no-internal-regret (or no-swap-regret) is the strongest form of no-\(\Phi\)-regret.
+</p>
+</li>
+<li><p>Technical results: \(\|(x+y)^+\|_2^2 \le \|x^+ + y\|_2^2\)
+</p>
+</li>
+<li><p>Technical results: \(\|(x+y)^+\|_2^2 \ge \|x^+\|_2^2 +2(x^+ \cdot y)\)
+</p>
+</li>
+</ol>
+<p>
+</p>
+<h3>Q10 What's next? Is there any further work to be done?</h3>
+<p>I believe this paper has resolved the equivalence and translation of no-regret learning and game-theoretic equilibrium in matrix games, in terms of average iterate, using the Blackwell Approachability Theorem.
+</p>
+<p>
+I think several further works can be done:
+</p>
+<ol>
+<li><p>Efficient algorithm computing the fixed-point problem.
+</p>
+</li>
+<li><p>Like the paper &lsquo;&lsquo;No-Regret Learning in Convex Games&rsquo;&rsquo;, more nuanced forms of regret may exist in special games such as convex games or extensive-form games.
+</p>
+</li>
+<li><p>The equivalence and translation of no-regret learning and game-theoretic equilibrium in matrix games, in terms of the last iterate, and the corresponding last-iterate version of Blackwell Approachability Theorem
+</p>
+</li>
+<li><p>\(\epsilon\)-equlibrium and the corresponding converge rate of the no-regret algorithm can be calculated under the same frame as in this paper.
+</p>
+</li>
+</ol>
+<p>
+</p>
+<h2>No-Regret Learning in Convex Games  </h2>
+<p>
+</p>
+<h3>Q1 What problem is the paper trying to solve?</h3>
+<p>
+Try to investigate new regret types in online convex optimization, and analogous new equilibrium types in repeated convex games.
+</p>
+<p>
+</p>
+<h3>Q2 Is this a new problem?</h3>
+<p>
+Yes. External regret and swap regret are well studied in the experts problem of online learning, and we know that these two regrets lead to coarse correlated equilibrium and correlated
+equilibrium respectively in matrix games.
+</p>
+<p>
+</p>
+<h3>Q3 What scientific hypothesis is this article trying to test?</h3>
+<p>
+In the context of online convex optimization, there are more nuanced forms of regret beyond external and swap regret (which appear in experts problem), such as
+extensive-form regret, linear regret, and finite element regret.
+</p>
+<p>
+And there are also richer equilibrium types in convex games. In practice, if \(i\)-th player uses the No-\(\Phi_i\)-Regret algorithm, the empirical distribution of joint play
+converges to \(\langle \Phi_i\rangle_{i\in N}\)-equilibrium in matrix game. The author wants to prove the same relationship between convex games and online convex optimization.
+</p>
+<p>
+</p>
+<h3>Q5 What is the key to the solution mentioned in the paper?</h3>
+<p>
+The authors declare that they propose the most efficient algorithm known so far for several problems, including guaranteeing convergence to a CE in a repeated convex game and 
+extensive-form CE in an extensive-form game, while most previous algorithms can only converge to CCE. 
+</p>
+<p>
+The underlying idea is to design an algorithm suiting for any action transformation set \(\Phi\). The algorithm contains two subroutine algorithms,
+the first algorithm can get the fixed point of \(\Phi\), making \(\Phi(x) = x\), the second algorithm is just any No-\(\Phi_{\text{EXT}}\)-Regret algorithm.
+</p>
+<p>
+To make this idea come true, the authors introduce some assumptions about \(\Phi\). Specifically, they assume that \(\Phi\) is a subset of reproducing-kernel Hilbert space,
+making \(\phi(a)\) linear in \(\phi\). Additionally, \(\Phi\) should be convex and compact to satisfy the conditions for the fixed-point algorithm.  
+Furthermore, the first fixed-point algorithm needs to run efficiently.
+</p>
+<p>
+For the utility function, in section 2.2, they treat convex loss as linear loss to apply the kernel trick. I'm a bit confused about the generality of this approach.
+When the utility function is linear, the randomized variant of the proposed algorithm also has No-\(\Phi\)-Regret property.
+</p>
+<p>
+</p>
+<h3>Q10 What's next? Is there any further work to be done?</h3>
+<ol>
+<li><p>Efficient representation of the transformation sets \(\Phi\). In this paper, the authors use the kernel trick and there are maybe other efficient representation ways.
+</p>
+</li>
+<li><p>Kernelized No-\(\Phi\)-Regret algorithm. Integrating the kernel trick for \(\Phi\) into the algorithm design eliminates the need to write down a transformation \(\phi\) explicitly.
+</p>
+</li>
+<li><p>Extensive-from game. We require efficient algorithms using bandit feedback information from the tree,
+and we also need abstraction algorithms to convert large games into smaller representations that we can work with in real time.
+</p>
+</li>
+<li><p>An interesting fact is that the proposed algorithm uses the fixed-point theorem on \(\Phi\) transformation set, this method is really like the condition of the Blackwell Approachability Theorem, there may exist an underlying relationship.
+</p>
+</li>
+</ol>
+<p>
+</p>
+<p>
+</p>
+<h2>Game theory, on-line prediction and boosting</h2>
+<p>Work from Adaboost's authors:  Yoav Freund and Robert Schapire.
+</p>
+<h3>Q1 What problem is the paper trying to solve?</h3>
+<p>Build a connection between game theory and online learning, and use the theory to derive a new boosting algorithm.
+</p>
+<h3>Q2 Is this a new problem?</h3>
+<p>Yes.
+</p>
+<h3>Q3 What scientific hypothesis is this article trying to test?</h3>
+<p>There are strong connections between game theory and online learning.
+</p>
+<h3>Q4 What are the relevant studies? How do you classify it? Who are the remarkable researchers in this field?</h3>
+<p>For game theory, this paper focuses on von Neumann's minmax theorem, a two-people case of Nash equilibrium.
+</p>
+<p>
+For online learning, this paper focuses on the hedge algorithm (which is also proposed by these two authors).
+</p>
+<p>
+For the boosting algorithm, this paper focuses on a weak version of AdaBoost (which is also proposed by these two authors).
+</p>
+<h3>Q5 What is the key to the solution mentioned in the paper?</h3>
+<p>Online learning to game theory: using hedge to re-prove minmax theorem: transform the one-shot game to a repeated game in which the learner learns in the game while the environment may change in an arbitrary manner. Then this process can be used in the proof of the minmax theorem and is also a way to solve the minmax game.
+</p>
+<p>
+Game theory to online learning: It's common to see online learning as a game. However, when we see an action that can be taken by the environment as a hypothesis, then the regret is connected with the hypothesis space. This idea is non-trivial.
+</p>
+<p>
+Game theory to boosting: the repeated game between a weak learner and data producer (boost algorithm). The weak learner's dynamic is a series of hypotheses and will used to compose the strong learner, the data producer's dynamic is the boosting algorithm.
+</p>
+<p>
+</p>
+<h3>Q10 What's next? Is there any further work to be done?</h3>
+<p>
+More connection between the game and online learning: tree-form game? multiagent game and Nash equilibium? regret and hypothesis space?
+</p>
+<p>
+A universal theory of game and online learning?
+</p>
+<p>
+</p>
+<p>
+</p>
+<h2>A Light CNN for Deep Face Representation With Noisy Labels </h2>
+<p>更多内容可见我做的<a href="paper__daily/TIFS18_LightCNN.pdf" target=&ldquo;blank&rdquo;>ppt</a>。
+</p>
+<h3>Q1 论文试图解决什么问题？ </h3>
+<p>降低网络参数量。
+</p>
+<p>
+</p>
+<h3>Q2 这是否是一个新的问题？</h3>
+<p>否。
+</p>
+<p>
+</p>
+<h3>Q3 这篇文章要验证一个什么科学假设？ </h3>
+<p>MFM (Max-Feature-Map)可以实现特征图间的融合，从而在降低一半参数量的同时保持性能。
+</p>
+<p>
+</p>
+<h3>Q5 论文中提到的解决方案之关键是什么？</h3>
+<p>MFM：将两个特征图逐点对齐输出每两个点的最大值，于是两个特征图就融合成一个特征图了。
+</p>
+<h3>Q6 论文中的实验是如何设计的？</h3>
+<p>achieves state-of-the-art results on various face benchmarks without fine-tuning.
+</p>
+<h3>Q7 用于定量评估的数据集是什么？代码有没有开源？</h3>
+<p>公开数据集，开源代码。
+</p>
+<h3>Q8 论文中的实验及结果有没有很好地支持需要验证的科学假设？</h3>
+<p>是的。这篇文章有极丰富的实验验证。
+</p>
+<h3>Q9 这篇论文到底有什么贡献？</h3>
+<p>设计了Max-Feature-Map这样的操作，为轻量化网络设计提供了新的思路。
+</p>
+<p>
+</p>
+<h3>Q10 下一步呢？有什么工作可以继续深入？</h3>
+<p>Max-Feature-Map中将Max替换为Min将得到类似性能；将Max替换为其光滑近似logsumexp不仅得到类似性能，还能提高训练速度和推理速度（可能torch.logsumexp的实现经过了高效优化，速度比max快）。
+</p>
+<p>
+</p>
+<p>
+</p>
+<h2>Preference Dynamics Under Personalized Recommendations</h2>
+<p>
+更多内容可见我做的<a href="paper__daily/EC22_PreferenceDynamics.pdf" target=&ldquo;blank&rdquo;>ppt</a>。
+</p>
+<p>
+</p>
+<h3>Q1 论文试图解决什么问题？ </h3>
+<p>建模在个性化推荐的场景下人偏好（或观点）的演化过程
+</p>
+<h3>Q2 这是否是一个新的问题？</h3>
+<p>No。
+</p>
+<h3>Q3 这篇文章要验证一个什么科学假设？ </h3>
+<p>推荐系统的存在影响了人的观点的实例：
+</p>
+<p>
+回声室效应：在网络空间内，人们经常接触相对同质化的人群和信息，听到相似的评论，倾向于将其当作真相和真理，不知不觉中窄化自己的眼界和理解，走向故步自封甚至偏执极化。
+</p>
+<p>
+过滤气泡效应：我们看到的内容经过了算法（基于平台对用户喜好的观察）的过滤。我们不喜欢或不同意的新闻内容会被自动过滤掉，而这会缩小我们的认知范围。
+</p>
+<p>
+想要探究推荐系统的存在对人群观点的影响：
+推荐系统有没有加深个体的偏见，让个体变得激进？人群的观点是趋向还是分散？
+</p>
+<p>
+</p>
+<h3>Q5 论文中提到的解决方案之关键是什么？</h3>
+<p>Based on the model called Biased Assimilation proposed by HJMR, the author gives some theoretical results:
+</p>
+<p>
+It's easy to maximize one user's satisfaction, just continually recommend the same thing he does not hate. 
+</p>
+<p>
+Recommending the same thing to all users will lead to polarization.
+</p>
+<p>
+It's possible to keep the user's preference stationary in personalized recommendations. 
+</p>
+<p>
+When the user's initial preference is unknown, under some mild assumption, we can get the user's initial preference from the interaction between the user and the recommendation.  
+</p>
+<p>
+</p>
+<h3>Q9 这篇论文到底有什么贡献？</h3>
+<p>建模推荐系统的时候成功避开了神经网络这个盲盒；在建模了推荐系统对个体偏好的影响的基础上，探究了推荐系统和个体的交互过程。
+<br />
+从最大化用户满意程度、最大化用户兴趣不改变程度两个角度设计了算法。
+<br />
+发现固定推荐会导致人群观点极化。
+<br />
+设计算法用反馈信息还原用户初始偏好。
+</p>
+<p>
+</p>
+<h3>Q10 下一步呢？有什么工作可以继续深入？</h3>
+<p>建模考虑社交网络的基础上，以上结论和算法的性能保证还成立么？
+<br />
+实验验证。这篇论文纯理论，没有实验验证，当然做实验也比较困难。
+<br />
+将此理论结果和实际的推荐系统结合，设计出更棒的推荐机制。
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<h2>SCF-Net: Learning Spatial Contextual Features for Large-Scale Point Cloud Segmentation </h2>
+<p>
+</p>
+<h3>Q1 论文试图解决什么问题？ </h3>
+<p>3D点云上的语义分割。 输入是3D点云：每个3D点有空间信息（x,y,z坐标）和特征（RGB颜色等）；输出： 每个3D点的类别。
+</p>
+<h3>Q2 这是否是一个新的问题？</h3>
+<p>不是。
+</p>
+<h3>Q3 这篇文章要验证一个什么科学假设？ </h3>
+<p>Although 3D point clouds are generally unstructured and unordered, especially for large-scale point clouds, we can still get good semantic segmentation results using  neural networks 
+supported by geometric information.
+</p>
+<p>
+</p>
+<h3>Q4 有哪些相关研究？如何归类？谁是这一课题在领域内值得关注的研究员？ </h3>
+<p>
+projection-based( project 3D point clouds into 2D images and then process 2D semantic segmentation, then project back the intermediate segmentation results to the point clouds. 
+computationally expensive, the information loss of the details), 
+</p>
+<p>
+discretization-based ( convert the point cloud into a discrete representation, such as voxel, and then feed to a neural network for voxel-wise segmentation. computationally expensive,  sensitive to the granularity of the voxels), 
+</p>
+<p>
+and point-based methods(some of them could not deal with the large-scale point clouds.RandLA-Net utilized random sampling to achieve high efficiency and leveraged local feature aggregation module to learn and preserve geometric patterns)
+</p>
+<p>
+</p>
+<h3>Q5 论文中提到的解决方案之关键是什么？</h3>
+<p>
+They proposed SCF: a learnable module that learns Spatial Contextual Features from large-scale point clouds.
+The proposed module mainly consists of three blocks, including the local polar representation block(construct a spatial representation that is invariant to the z-axis rotation), the dual-distance attentive pooling block(utilize the representations of its neighbors for learning local features according to both the geometric and feature distances ), and the global contextual feature block(utilize its spatial location and the volume ratio of the neighborhood to the global point cloud).
+<br />
+SCF can be embedded in various neural networks. And the SCF-Net which is a  standard encoder-decoder architecture embedded with SCF performs better than several state-of-the-art methods in most cases
+</p>
+<h3>Q6 论文中的实验是如何设计的？</h3>
+<p>Evaluate SCF-Net on two typical large-scale point cloud benchmarks, and the ablation study of SCF focuses on the effects of three blocks of SCF.
+</p>
+<p>
+</p>
+<h3>Q7 用于定量评估的数据集是什么？代码有没有开源？</h3>
+<p>S3DIS and Semantic3D.The code is avaliable at <a href="https://github.com/leofansq/SCF-Net" target=&ldquo;blank&rdquo;>here</a>
+</p>
+<h3>Q8 论文中的实验及结果有没有很好地支持需要验证的科学假设？</h3>
+<p>yes.
+</p>
+<h3>Q9 这篇论文到底有什么贡献？</h3>
+<p>利用了人的先验知识改进网络架构（比如说语义分割应该使得网络对物体方向不敏感、欧式空间中临近的点可能是同一个物体，注意局部信息的同时也要注意全局信息），但却无法刻画能力边界，也没有一套严格的理论解释各部分作用。当然性能提升了，也是很有价值的探索。
+SCF-module的设计思想和Resnet一样，设计出一个模块，然后就可以应用于各种网络了。 
+</p>
+<p>
+</p>
+<h3>Q10 下一步呢？有什么工作可以继续深入？</h3>
+<p>更好的性能。更大规模的点云数据集。更有解释性的网络架构。
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<h2>Modeling the World from Internet Photo Collections</h2>
+<p>
+</p>
+<h3>Q1 论文试图解决什么问题？ </h3>
+<p>从网络图像中自动重建某个地点的3D稀疏点云，相机位姿。
+</p>
+<h3>Q2 这是否是一个新的问题？</h3>
+<p>Yes
+</p>
+<h3>Q3 这篇文章要验证一个什么科学假设？ </h3>
+<p>虽然网络图像无序、未校准、变化多、亮度不受控制、分辨率和质量等问题，很难被传统计算机视觉所应用，但是世界上大部分的地点的图片在网上都能被找到，而且角度时间齐全。
+我们的确可以利用这些数据完成3D点云稀疏重建的问题。
+</p>
+<p>
+</p>
+<h3>Q4 有哪些相关研究？如何归类？谁是这一课题在领域内值得关注的研究员？ </h3>
+<p>
+基于图像建模：从图片创建出三维模型；基于图像的渲染：合成任意角度照片版精美准确的图像；图像浏览：使用location等信息组织和浏览图像。
+</p>
+<p>
+08年第一作者Noah Snavely博士毕业，2014年当上了Cornell University的助理教授；
+Steve Seitz当时是Noah Snavely的导师，现任University of Washington教授，两次获得Marr Prize；
+Richard Szeliski是Noah Snavely另一位导师，2022年6月从华盛顿大学退休，加入Google，现任Google Distinguished Scientist，2010年写了本计算机视觉圣经《Computer Vision: Algorithms and Applications》
+</p>
+<p>
+</p>
+<h3>Q5 论文中提到的解决方案之关键是什么？</h3>
+<p>特征点检测和匹配（传统的SIFT方案），稀疏重建（此文章的这套流程已被写入教材）。
+</p>
+<p>
+</p>
+<h3>Q6 论文中的实验是如何设计的？</h3>
+<p>主要是展示系统效果：针对一个地点的网络图片，重建出稀疏点云，展示不同角度的照片之间的平滑过渡。
+</p>
+<p>
+</p>
+<h3>Q7 用于定量评估的数据集是什么？代码有没有开源？</h3>
+<p>作者将Structure from Motion (SfM)用于一些数据集，每个数据集是关于一个地点的网络图片搜集（比如巴黎圣母院）。
+</p>
+<p>
+代码见<a href="http://phototour.cs.washington.edu/" target=&ldquo;blank&rdquo;>网站</a>
+</p>
+<h3>Q8 论文中的实验及结果有没有很好地支持需要验证的科学假设？</h3>
+<p>
+支持了。此文的系统后来成为Photo tourism项目，由微软支持实际上线；但可惜用户数量少。
+</p>
+<p>
+</p>
+<h3>Q9 这篇论文到底有什么贡献？</h3>
+<p>问题方面提出可以从网络图像中自动重建某个地点的3D稀疏点云，相机位姿；此问题新在数据——从传统的人工筛选过的数据集变为网络图像。
+</p>
+<p>
+方法方面Structure from Motion的这一套流程几乎成为十几年的行业标准，现在课上都还会教。
+</p>
+<p>
+</p>
+<h3>Q10 下一步呢？有什么工作可以继续深入？</h3>
+<p>更高的效率——算法运行时间过长（2635张图片运行12.7天）。
+更大的数据集——此文最多只是几千张图片。
+更高的准确性——大部分SFM只通过最小化重投影误差来运行，无法保证准确性。可以利用更加丰富的定位信息来比较SFM的重建结果的准确性。
+更在线的算法——试想一下你拍个照，然后算法返回你的位置并且实时对图像中的物体进行注释。实际上今天第一部分的识别位置已经实现了！
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<h2>能耗优化的神经网络轻量化方法研究进展</h2>
+<p>
+</p>
+<h3>Q1 论文试图解决什么问题？ </h3>
+<p>大量的神经网络被部署于诸如手机、摄像头等依赖电池或太阳能供电的小型设备。
+神经网络轻量化方法可以有效地减少参数数量、降低参数精度或优化计算过程从而降低神经网络能耗。
+本文从能耗优化的角度梳理了神经网络能耗估算方法和神经网络轻量化方法的基本思路。
+<br />
+比如：
+具有 50 个卷积层的 ResNet-50 在推理阶段处理图像时需要占用超过 95MB 的内存，执行超过 38亿次浮点乘法；
+图像分类的基础网络 AlexNet在手机端运行不到一个小时就耗光了手机全部电能.
+</p>
+<h3>Q2 这是否是一个新的问题？</h3>
+<p>不是。
+</p>
+<h3>Q3 这篇文章要验证一个什么科学假设？ </h3>
+<p>在移动端设备上进行能耗优化是有意义的一件事，且可以研究。
+</p>
+<p>
+</p>
+<h3>Q4 有哪些相关研究？如何归类？谁是这一课题在领域内值得关注的研究员？ </h3>
+<p>神经网络能耗估算方法包括测量法、分析法和估算法。
+能耗优化的神经网络轻量化方法包括剪枝、量化、张量分解和知识蒸馏。
+</p>
+<p>
+</p>
+<p>
+</p>
+<h3>Q5 论文中提到的解决方案之关键是什么？</h3>
+<p>能耗估算：
+<br />
+测量法：属于硬件层的能耗估算方法，使用功率计等测量设备直接测量能耗。方法简单、能耗估值准确且不与特定的神经网络结构以及运行设备相关；诸多不足：（1）测量法粒度较大，只能测量神经网络整体的能耗
+（2）测量法通常需要测量多次才能获得准确的能耗估计，但现存的一些能耗优化方法是迭代的，依赖实时的能耗估算结果，因而测量法的使用存在性能瓶颈；
+（3）测量法需投入测量设备，无法广泛用于大规模能耗估算
+<br />
+分析法：属于系统层面的估算方法，通过分析产生能耗的直接因素，如网络计算次数和数据存取次数。计算能耗：由计算产生的能耗. 在分析法中通常根据不同层的结构参数，如神经元个数、权值个数等，统计每秒执行的浮点运算次数(FLOPs, FLoating point Operations)或乘积累加运算数(MAC，Multiply and Accumulate)等硬件参数进行估算. 
+数据访问能耗：由数据读写产生的能耗. 在分析法中通过统计读取数据的总比特数，结合各存储单元读取单位比特数据的能耗值进行估算.
+（3）但分析法也存在劣势如下：（1）由于神经网络中非线性计算的存在，以及计算资源利用不充分等，网络计算操作数量与 FLOPs 不成线性比例. （2）在计算能耗时，FLOPs 也不一定与能耗成线性关系.
+<br /> 
+估算法：属于应用层的估算方法，通过分析神经网络结构和产生能耗相关的特征，利用机器学习、深度学习等方法，预测网络运行时的能耗.
+<br />
+神经网络轻量化方法：
+剪枝、量化、张量分解和知识蒸馏；这些基本不会产生精度损失，压缩倍数也都还可以。
+</p>
+<p>
+</p>
+<h3>Q10 下一步呢？有什么工作可以继续深入？</h3>
+<p>首先需要建立可自适应网络类型的能耗模型：设备无关，网络无关。
+然后需要考虑平衡精度和能耗的轻量化方法 
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<h2>Efficient Test-Time Model Adaptation without Forgetting </h2>
+<p>
+</p>
+<h3>Q1 论文试图解决什么问题？ </h3>
+<p>In practice, test samples may encounter natural variations or corruptions (also called distribution shifts), such as changes in lighting resulting from weather changes and unexpected noises resulting from sensor degradation (Hendrycks &amp; Dietterich, 2019; Koh et al., 2021).
+</p>
+<p>
+Trying to solve this problem, Test-Time Adaptation (TTA) was proposed to improve model accuracy on OOD test data through model adaptation with unlabeled test samples.
+</p>
+<p>
+EATA tries  to improve training efficiency by finding out the reliable and non-redundant sample. 
+</p>
+<p>
+Second, other methods focus on boosting the performance of a trained model on out-of-distribution (OOD) test samples,
+ignoring that the model after test-time adaptation suffers a severe performance degradation (named forgetting) on in-distribution (ID) test samples
+So EATA tries to alleviate the forgetting issue with a Fisher regularizer to constrain important model parameters from drastic changes, where the Fisher importance is estimated from test samples with generated pseudo labels.
+</p>
+<h3>Q2 这是否是一个新的问题？</h3>
+<p>No.
+</p>
+<p>
+</p>
+<h3>Q3 这篇文章要验证一个什么科学假设？ </h3>
+<p>It's possible to find reliable and non-redundant samples to improve sample (or training) efficiency 
+</p>
+<p>
+</p>
+<h3>Q4 有哪些相关研究？如何归类？谁是这一课题在领域内值得关注的研究员？ </h3>
+<p>Existing test-time training methods, e.g., TTT (Sun et al., 2020), TTT<tt></tt> (Liu et al., 2021), and MT3 (Bartler et al., 2022), jointly train a source model via both supervised and self-supervised objectives, and then adapt the model via self-supervised objective at test time
+<br />
+This pipeline, however, has assumptions on the manner of model training, which may not always be controllable in practice. 
+<br />
+To address this, fully test-time adaptation methods have been proposed to adapt a model with only test data, including batchnorm statistics adaptation (Nado et al., 2020; Schneider et al., 2020; Khurana et al., 2021), test-time entropy minimization (Wang et al., 2021; Fleuret et al., 2021), prediction consistency maximization over different augmentations (Zhang et al., 2021b), and classifier adjustment (Iwasawa &amp; Matsuo, 2021).
+</p>
+<p>
+</p>
+<h3>Q5 论文中提到的解决方案之关键是什么？</h3>
+<p>I think the proposed method is not scientific, just a few tricks that seem to work.
+</p>
+<p>
+Although we do not have a label for test-time model training, we can use unsupervised learning, that is, using predictions on test examples or trying to assign all probability to the most probable class. 
+</p>
+<h3>Q6 论文中的实验是如何设计的？</h3>
+<p>However, the experiments are complete.
+</p>
+<p>
+First, for the OOD and ID setting, they think most methods assume that all the test samples are drawn from out-of-distribution (OOD). In practice, the test samples may come from both in-distribution (ID) and OOD. Simply optimizing the model on OOD test samples may lead to severe performance degradation on ID test samples. We empirically validate the existence of such issue in Figure 3, where the updated model has a consistently lower accuracy on ID test samples than the original model.
+So in Figure 3, they report the model ID performance after adaptation on OOD. 
+</p>
+<p>
+</p>
+<h3>Q7 用于定量评估的数据集是什么？代码有没有开源？</h3>
+<p>Three benchmark datasets for OOD generalization: CIFAR-10-C, ImageNet-C, and ImageNet-R.
+The code has been run on my lab servers. 
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<h2>Continual Test-Time Domain Adaptation </h2>
+<p>
+</p>
+<h3>Q1 论文试图解决什么问题？</h3>
+<p>They propose a problem named Continual Test-Time Domain Adaptation: the source model will be applied to continual 
+changing environment and the model can be trained  without the source data.
+</p>
+<p>
+</p>
+<h3>Q2 这是否是一个新的问题？</h3>
+<p>Yes
+</p>
+<h3>Q3 这篇文章要验证一个什么科学假设？ </h3>
+<p>It is possible that the model will adapt to the changing environment (test-time data) without the source data.
+</p>
+<p>
+</p>
+<h3>Q4 有哪些相关研究？如何归类？谁是这一课题在领域内值得关注的研究员？ </h3>
+<p>See paper's section 2.
+</p>
+<p>
+Domain Adaptation: improve model performance in the presence of a domain shift between the labeled source domain and unlabeled target domain.
+</p>
+<p>
+Test-time Adaptation: domain adaptation without source data.
+</p>
+<p>
+Continuous Domain Adaptation: the target data will continually change.
+</p>
+<p>
+Continual Learning: try to solve catastrophic forgetting.
+</p>
+<p>
+Domain Generalization:  train a more generalizable neural network from the source domain.
+</p>
+<p>
+</p>
+<h3>Q7 用于定量评估的数据集是什么？代码有没有开源？</h3>
+<p>Five continual testtime adaptation benchmark tasks: CIFAR10-to-CIFAR10C(standard and gradual), CIFAR100-to-CIFAR100C, and
+ImageNet-to-ImageNet-C for image classification, as well as Cityscapses-to-ACDC for semantic segmentation.
+<br />
+The code is available at https:<i></i>qin.ee/cotta. 
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<h2>Ten questions of the paper</h2>
+<p>
+The ten questions of a paper are a framework for quickly understanding the main idea of a paper.
+</p>
+<p>
+</p>
+<h3>Q1 What problem is the paper trying to solve?</h3>
+<p>
+</p>
+<h3>Q2 Is this a new problem?</h3>
+<p>
+</p>
+<h3>Q3 What scientific hypothesis is this article trying to test?</h3>
+<p>
+</p>
+<h3>Q4 What are the relevant studies? How do you classify it? Who are the remarkable researchers in this field?</h3>
+<p>
+</p>
+<h3>Q5 What is the key to the solution mentioned in the paper?</h3>
+<p>
+</p>
+<h3>Q6 How is the experiment in the paper designed?</h3>
+<p>
+</p>
+<h3>Q7 What datasets are used for quantitative evaluation? Is the code open source?</h3>
+<p>
+</p>
+<h3>Q8 Do the experiments and results in the paper well support the scientific hypothesis that needs to be tested?</h3>
+<p>
+</p>
+<h3>Q9 What exactly does this paper contribute?</h3>
+<p>
+</p>
+<h3>Q10 What's next? Is there any further work to be done?</h3>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<h2>论文十问 </h2>
+<p>论文十问是可以快速理解论文主旨的一套框架
+</p>
+<p>
+</p>
+<h3>Q1 论文试图解决什么问题？ </h3>
+<p>
+</p>
+<h3>Q2 这是否是一个新的问题？</h3>
+<p>
+</p>
+<h3>Q3 这篇文章要验证一个什么科学假设？ </h3>
+<p>
+</p>
+<h3>Q4 有哪些相关研究？如何归类？谁是这一课题在领域内值得关注的研究员？ </h3>
+<p>
+</p>
+<h3>Q5 论文中提到的解决方案之关键是什么？</h3>
+<p>
+</p>
+<h3>Q6 论文中的实验是如何设计的？</h3>
+<p>
+</p>
+<h3>Q7 用于定量评估的数据集是什么？代码有没有开源？</h3>
+<p>
+</p>
+<h3>Q8 论文中的实验及结果有没有很好地支持需要验证的科学假设？</h3>
+<p>
+</p>
+<h3>Q9 这篇论文到底有什么贡献？</h3>
+<p>
+</p>
+<h3>Q10 下一步呢？有什么工作可以继续深入？</h3>
+<p>
+</p>
+<p>
+</p>
+<p>
+示例：
+<a href="https://readpaper.com/paper/2969825080" target=&ldquo;blank&rdquo;>Deep High-Resolution Representation Learning for Visual Recognition</a>; <a href="https://zhuanlan.zhihu.com/p/449427192" target=&ldquo;blank&rdquo;>Video Imprint</a>; <a href="https://zhuanlan.zhihu.com/p/459737561" target=&ldquo;blank&rdquo;>MetaAvatar</a>
+</p>
+<p>
+</p>
+<p>
+文献阅读的颜色规定：
+黄色 重要; 红色 非常重要; 绿色 没看懂; 蓝色 好词好句（但每看完一篇文章，得总结，还要积累：结构性的语句，合适的词汇，套话）
+</p>
+<p>
+</p>
+<p>
+latex 示例：
+The conjugate function \(f^\star(y) = \sup_{x \in X}(y^Tx - f(x))\);
+</p>
+<p>
+</p>
+<p style="text-align:center">
+\[
+  f(x) = \left\{
+  \begin{array}{ll}
+  3, &amp; x \leq 0 \\
+  5, &amp; x &gt; 0. \\
+  \end{array}\right.
+  \]
+</p></td>
+</tr>
+</table>
+</body>
+</html>

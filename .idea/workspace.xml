@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0b9355ec-5d96-4f98-a364-d8deb86f7446" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Blog/22-09.jemdoc" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/22-09.jemdoc" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2CSnU8fMluHfCBbTbDA3wm7apog" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/jemdoc_latex.py" />
+  </component>
+  <component name="RunManager" selected="Python.jemdoc_latex.py">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="chg-chg.github.io" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\Program Files\python\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jemdoc.py" />
+      <option name="PARAMETERS" value="index.jemdoc" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="jemdoc" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="chg-chg.github.io" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\Program Files\python\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jemdoc" />
+      <option name="PARAMETERS" value="-c mysite_icon.conf Talk.jemdoc" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="jemdoc_latex.py" type="PythonConfigurationType" factoryName="Python">
+      <module name="chg-chg.github.io" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\Program Files\python\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jemdoc_latex.py" />
+      <option name="PARAMETERS" value="-c mysite_icon.conf known\Blog\23-06.jemdoc" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="jemdoc.py" type="PythonConfigurationType" factoryName="Python">
+      <module name="chg-chg.github.io" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\Program Files\python\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jemdoc.py" />
+      <option name="PARAMETERS" value="-c mysite_icon.conf known\Blog\23-06.jemdoc" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.jemdoc" />
+      <item itemvalue="Python.jemdoc.py" />
+      <item itemvalue="Python.jemdoc_latex.py" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0b9355ec-5d96-4f98-a364-d8deb86f7446" name="Default Changelist" comment="" />
+      <created>1658804887672</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1658804887672</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="66" y="12" width="1089" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1696162796912">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="66" y="12" width="1089" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.720@0.0.1280.720" timestamp="1696162796912" />
+    <state x="369" y="169" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1696154151253">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="369" y="169" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.720@0.0.1280.720" timestamp="1696154151253" />
+    <state x="390" y="136" key="FileChooserDialogImpl" timestamp="1696162795985">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="390" y="136" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1696162795985" />
+    <state width="1258" height="208" key="GridCell.Tab.0.bottom" timestamp="1696166105863">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1258" height="208" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1696166105863" />
+    <state width="1258" height="208" key="GridCell.Tab.0.center" timestamp="1696166105863">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1258" height="208" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1696166105863" />
+    <state width="1258" height="208" key="GridCell.Tab.0.left" timestamp="1696166105863">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1258" height="208" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1696166105863" />
+    <state width="1258" height="208" key="GridCell.Tab.0.right" timestamp="1696166105863">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1258" height="208" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1696166105863" />
+    <state width="1258" height="208" key="GridCell.Tab.1.bottom" timestamp="1696166105863">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1258" height="208" key="GridCell.Tab.1.bottom/0.0.1280.720@0.0.1280.720" timestamp="1696166105863" />
+    <state width="1258" height="208" key="GridCell.Tab.1.center" timestamp="1696166105863">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1258" height="208" key="GridCell.Tab.1.center/0.0.1280.720@0.0.1280.720" timestamp="1696166105863" />
+    <state width="1258" height="208" key="GridCell.Tab.1.left" timestamp="1696166105863">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1258" height="208" key="GridCell.Tab.1.left/0.0.1280.720@0.0.1280.720" timestamp="1696166105863" />
+    <state width="1258" height="208" key="GridCell.Tab.1.right" timestamp="1696166105863">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1258" height="208" key="GridCell.Tab.1.right/0.0.1280.720@0.0.1280.720" timestamp="1696166105863" />
+    <state width="647" height="367" key="XDebugger.FullValuePopup" timestamp="1696153780089">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="647" height="367" key="XDebugger.FullValuePopup/0.0.1280.720@0.0.1280.720" timestamp="1696153780089" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/jemdoc.py</url>
+          <line>1066</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/jemdoc</url>
+          <line>1634</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/jemdoc</url>
+          <line>1263</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/jemdoc.py</url>
+          <line>404</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

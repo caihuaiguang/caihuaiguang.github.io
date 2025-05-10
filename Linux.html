@@ -1,0 +1,397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Linux 命令积累</title>
+<style type="text/css">
+.abs {
+ background-color: #eefaff;
+ color: #202020;
+ max-width: auto;
+ border: 1px solid #dddddd;
+ padding: 7px;
+ display: none;
+}F
+li{
+    margin-top: 10px;
+}
+li:first-child {
+    margin-top:0;
+}
+</style>
+<script type="text/javascript">
+function showAbstract(e){
+   var div;
+   for(div = e.nextSibling; div.className != "abs"; div = div.nextSibling);
+   if (div.style.display=="block"){
+     div.style.display="";
+   } else {
+     div.style.display="block";
+   }
+   return true;
+}
+</script>
+<script>
+	function toggle(pId) {
+	var e=document.getElementById(pId);
+	if (!e) return;
+	if (e.style.display == "none") {
+		e.style.display = "block"
+	} else {
+		e.style.display = "none"
+	}
+	return;
+	}
+</script>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+<link rel="icon" type="image/x-icon" href="./pictures/monster-icons/ICO/kidaha-02.ico" >
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Huaiguang Cai</div>
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-item"><a href="Link.html">Link</a></div>
+<div class="menu-category">Idea</div>
+<div class="menu-item"><a href="GT.html">Game&nbsp;Theory</a></div>
+<div class="menu-item"><a href="OD.html">Online&nbsp;Decision</a></div>
+<div class="menu-item"><a href="LLM_RL.html">LLM&nbsp;and&nbsp;RL</a></div>
+<div class="menu-category">Record</div>
+<div class="menu-item"><a href="Paper_Daily.html">Paper&nbsp;Daily</a></div>
+<div class="menu-item"><a href="Summary.html">Summary</a></div>
+<div class="menu-item"><a href="Talk.html">Talk</a></div>
+<div class="menu-category">Material</div>
+<div class="menu-item"><a href="Linux.html" class="current">Linux</a></div>
+<div class="menu-item"><a href="English.html">English</a></div>
+<div class="menu-item"><a href="Math.html">Math</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Linux 命令积累</h1>
+<div id="subtitle">从网上积累的Linux命令自查手册
+</div>
+</div>
+<p>
+</p>
+<h2>Using jemdoc  </h2>
+<p><a href="./www/www.html" target=&ldquo;blank&rdquo;>jemdoc</a>
+</p>
+<p>
+</p>
+<h2>Linux</h2>
+<p>
+</p>
+<div class="codeblock">
+<div class="blocktitle">运行库的源代码出现“当前环境没安装此库”</div>
+<div class="blockcontent"><pre>
+from dattri.algorithm.influence_function import IFAttributor
+
+ModuleNotFoundError: No module named 'dattri'
+
+我已经下载了代码在本地，我不希望安装dattri到库中
+
+解决方案：设置 PYTHONPATH 环境变量，使 Python 可以找到 dattri 模块：
+
+export PYTHONPATH=/home/caihuaiguang/DSG/dattri:$PYTHONPATH
+</pre></div></div>
+<p>
+</p>
+<p>
+</p>
+<div class="codeblock">
+<div class="blocktitle">查看目录的大小</div>
+<div class="blockcontent"><pre>
+\-h 代表 human可读，\. 表示递归显示当前目录下所有目录的大小
+
+du -h .
+cat /etc/issue
+</pre></div></div>
+<p>
+</p>
+<div class="codeblock">
+<div class="blocktitle">查看当前版本号 </div>
+<div class="blockcontent"><pre>
+cat /etc/issue
+</pre></div></div>
+<p>
+</p>
+<div class="codeblock">
+<div class="blocktitle">文件移动：本地</div>
+<div class="blockcontent"><pre>
+mv &lt;source file&gt; &lt;destination dir&gt;
+</pre></div></div>
+<p>
+</p>
+<p>
+</p>
+<div class="codeblock">
+<div class="blocktitle">文件移动：本地和远程</div>
+<div class="blockcontent"><pre>
+主机a存在一个大文件 /opt/test/abc.zip，传到主机b的:/opt/test/目录下。
+
+可登录到主机a下，使用scp命令如下
+
+scp /opt/test/abc.zip root@&lt;主机b的IP地址&gt;:/opt/test/
+
+比如：
+
+scp Tiny-ImageNet-C.tar caihuaiguang@172.18.34.38:/media/caihuaiguang/
+</pre></div></div>
+<p>
+</p>
+<div class="codeblock">
+<div class="blocktitle">运行jupyter nootbook</div>
+<div class="blockcontent"><pre>
+打开cmd, 找到对应.ipynb文件地址
+
+输入“jupyter notebook”
+
+[https://blog.csdn.net/StarandTiAmo/article/details/126663812 没有添加环境变量导致无法启动]
+</pre></div></div>
+<p>
+</p>
+<div class="codeblock">
+<div class="blocktitle">pip.exe、python.exe</div>
+<div class="blockcontent"><pre>
+在WSL下，使用如下命令查找整个电脑中 python (pip) 所在位置:
+
+whereis python(pip)
+
+进入这些位置后，能成功运行如下命令:
+
+pip.exe install mininet
+
+等价于 sudo python -m pip install mininet
+</pre></div></div>
+<p>
+</p>
+<div class="codeblock">
+<div class="blocktitle">计时</div>
+<div class="blockcontent"><pre>
+运行程序：
+g++ main.cpp
+./a.out
+
+计时：
+time ./a.out
+
+1s后要是没有运行完，就杀掉程序：
+timeout 1 ./a.out
+</pre></div></div>
+<p>
+</p>
+<div class="codeblock">
+<div class="blocktitle">管道 |</div>
+<div class="blockcontent"><pre>
+
+管道 | 可以将左边的结果当作参数输入到右边
+
+统计当前文档下cpp文件的总代码行数
+
+find . | grep \.cpp$ | xargs cat | wc -l
+</pre></div></div>
+<p>
+</p>
+<h2>Linux查看显卡</h2>
+<p>
+</p>
+<div class="codeblock">
+<div class="blocktitle">gpustat 包查看每张卡的用户和剩余显存</div>
+<div class="blockcontent"><pre>
+conda activate ...
+
+gpustat -i
+</pre></div></div>
+<p>
+</p>
+<div class="codeblock">
+<div class="blocktitle">nvidia GPU 查看显卡信息</div>
+<div class="blockcontent"><pre>
+lspci | grep -i nvidia
+</pre></div></div>
+<p>
+</p>
+<div class="codeblock">
+<div class="blocktitle">查看指定显卡的详细信息</div>
+<div class="blockcontent"><pre>
+lspci -v -s 35:00.0
+</pre></div></div>
+<p>前边的序号 &ldquo;35:00.0&rdquo;是显卡的代号
+</p>
+<p>
+</p>
+<div class="codeblock">
+<div class="blocktitle">Nvidia查看显存</div>
+<div class="blockcontent"><pre>
+nvidia-smi
+
+表头释义：
+
+Fan：显示风扇转速，数值在0到100%之间，如果计算机不是通过风扇冷却或者风扇坏了，显示出来就是N/A；
+Temp：显卡内部的温度，单位是摄氏度；
+Perf：表征性能状态，从P0到P12，P0表示最大性能，P12表示状态最小性能；
+Pwr：能耗表示；
+Bus-Id：涉及GPU总线的相关信息；
+Disp.A：是Display Active的意思，表示GPU的显示是否初始化；
+Memory Usage：显存的使用率；
+Volatile GPU-Util：浮动的GPU利用率；
+Compute M：计算模式；
+</pre></div></div>
+<p>
+</p>
+<p>
+</p>
+<h2>服务器上配置环境</h2>
+<p>0. <a href="https://blog.csdn.net/srh20/article/details/136937398" target=&ldquo;blank&rdquo;>无root权限服务器上装cuda</a>，还有<a href="https://blog.csdn.net/w946612410/article/details/131786512" target=&ldquo;blank&rdquo;>cudnn</a>
+</p>
+<p>
+1. 装conda， 见<a href="https://www.jianshu.com/p/2f5cf2edaaef" target=&ldquo;blank&rdquo;>Linux安装conda</a>
+</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+#wget 加网址，中间可以加-c参数，断点续传
+wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+bash Miniconda3-latest-Linux-x86_64.sh
+
+这里一直按yes或enter，想换位置装conda的话，在“or specify a different location below”下输入想要安装的位置
+
+激活刚安装完成的软件：source ~/.bashrc
+
+检查conda是否安装成功：conda --help
+
+配置conda镜像：
+conda config --add channels r
+conda config --add channels conda-forge
+conda config --add channels bioconda
+
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+conda config --set show_channel_urls yes
+
+查看配置镜像结果：cat ~/.condarc
+</pre></div></div>
+<p>
+2. conda下装虚拟环境
+</p>
+<p>
+</p>
+<div class="codeblock">
+<div class="blockcontent"><pre>
+# 查看当前conda环境
+conda info -e
+
+# 创建名为rna的软件环境来安装转录组学分析的生物信息学软件
+conda create -y -n  rna  python=3
+#如果不加-y，中间会问需要继续进程吗
+#linux一般会默认安装python最新版本，除非所处的环境不能安装最新版本的。
+
+# 每次运行前，激活创建的小环境rna
+conda activate rna
+##激活成功会出现一个小括号（小环境名字，rna）
+# 退出小环境
+conda deactivate
+
+
+
+# 查看虚拟环境列表，此时出现列表的同时还会显示其所在路径
+conda env list
+
+# 第二步：删除环境
+conda remove -n  需要删除的环境名 --all
+</pre></div></div>
+<p>
+</p>
+<div class="codeblock">
+<div class="blocktitle">安装vllm太慢</div>
+<div class="blockcontent"><pre>
+pip install vllm==0.7.2 -i https://pypi.tuna.tsinghua.edu.cn/simple
+</pre></div></div>
+<p>
+</p>
+<p>
+</p>
+<div class="codeblock">
+<div class="blocktitle">指定某张卡可见</div>
+<div class="blockcontent"><pre>
+export CUDA_VISIBLE_DEVICES=2,3
+</pre></div></div>
+<p>
+</p>
+<div class="codeblock">
+<div class="blocktitle">conda装pytoch的话要在官网上查版本号</div>
+<div class="blockcontent"><pre>
+conda install pytorch torchvision torchaudio pytorch-cuda=11.6 -c nvidia
+</pre></div></div>
+<p>
+</p>
+<div class="codeblock">
+<div class="blocktitle">&rsquo;r&rsquo;: command not found</div>
+<div class="blockcontent"><pre>
+Remove trailing \r character that causes this error:
+
+sed -i 's/\r$//' filename
+
+Explanation:
+
+Option -i is for in-place editing, we delete the trailing \r directly in the input file.
+</pre></div></div>
+<p>
+</p>
+<h2>Git</h2>
+<div class="codeblock">
+<div class="blocktitle">Push code to remote branch</div>
+<div class="blockcontent"><pre>
+git clone https... #
+
+git add .
+git commit -m "initial"
+git push
+</pre></div></div>
+<p>
+</p>
+<h2>tmux</h2>
+<div class="codeblock">
+<div class="blocktitle">keep windows on</div>
+<div class="blockcontent"><pre>
+tmux new -s "name"
+tmux attach -t "name"
+tmux kill-session -t "name"
+</pre></div></div>
+<p>
+</p>
+<p>
+</p>
+<h2>VSCode for C<tt></tt></h2>
+<p>
+基本原理见<a href="https://oi-wiki.org/tools/editor/vscode/" target=&ldquo;blank&rdquo;>OI-wiki</a>。
+</p>
+<ul>
+<li><p>首先装GCC，<a href="https://nuwen.net/mingw.html" target=&ldquo;blank&rdquo;>MinGW</a>，注意环境变量配好<a href="https://blog.csdn.net/qq_55193018/article/details/126103009" target=&ldquo;blank&rdquo;>CSDN</a>
+</p>
+</li>
+<li><p>然后装vscode，各种插件（glangd之类的）
+</p>
+</li>
+<li><p>最后配置三个文件，见<a href="https://blog.csdn.net/qq_55193018/article/details/126103009" target=&ldquo;blank&rdquo;>CSDN</a>
+</p>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</body>
+</html>

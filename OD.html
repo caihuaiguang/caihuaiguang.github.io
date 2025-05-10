@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Online Decision</title>
+<style type="text/css">
+.abs {
+ background-color: #eefaff;
+ color: #202020;
+ max-width: auto;
+ border: 1px solid #dddddd;
+ padding: 7px;
+ display: none;
+}F
+li{
+    margin-top: 10px;
+}
+li:first-child {
+    margin-top:0;
+}
+</style>
+<script type="text/javascript">
+function showAbstract(e){
+   var div;
+   for(div = e.nextSibling; div.className != "abs"; div = div.nextSibling);
+   if (div.style.display=="block"){
+     div.style.display="";
+   } else {
+     div.style.display="block";
+   }
+   return true;
+}
+</script>
+<script>
+	function toggle(pId) {
+	var e=document.getElementById(pId);
+	if (!e) return;
+	if (e.style.display == "none") {
+		e.style.display = "block"
+	} else {
+		e.style.display = "none"
+	}
+	return;
+	}
+</script>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+<link rel="icon" type="image/x-icon" href="./pictures/monster-icons/ICO/kidaha-02.ico" >
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Huaiguang Cai</div>
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-item"><a href="Link.html">Link</a></div>
+<div class="menu-category">Idea</div>
+<div class="menu-item"><a href="GT.html">Game&nbsp;Theory</a></div>
+<div class="menu-item"><a href="OD.html" class="current">Online&nbsp;Decision</a></div>
+<div class="menu-item"><a href="LLM_RL.html">LLM&nbsp;and&nbsp;RL</a></div>
+<div class="menu-category">Record</div>
+<div class="menu-item"><a href="Paper_Daily.html">Paper&nbsp;Daily</a></div>
+<div class="menu-item"><a href="Summary.html">Summary</a></div>
+<div class="menu-item"><a href="Talk.html">Talk</a></div>
+<div class="menu-category">Material</div>
+<div class="menu-item"><a href="Linux.html">Linux</a></div>
+<div class="menu-item"><a href="English.html">English</a></div>
+<div class="menu-item"><a href="Math.html">Math</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Online Decision</h1>
+</div>
+<h2>Online Learning</h2>
+<ul>
+<li><p><a href="http://www.cs.cmu.edu/~sandholm/cs15-888F23/Lecture9.pdf" target=&ldquo;blank&rdquo;>Learning in Multi-Player Games: Regret, Convergence, and Efficiency</a>
+</p>
+</li>
+<li><p>FTL是最简单使用regret的算法（选取每次regret最大的动作），但是会出现乒乓现象；
+</p>
+</li>
+<li><p>RM则是按照regret的分布进行概率地选动作，但差的动作要是变好了不能马上反应出来；
+</p>
+</li>
+<li><p>RM+更进一步将差的（就是说累计遗憾小于0）动作当做累计遗憾为0的动作来处理，实际效果比RM好；RM+的Regret为\(\Omega(\sqrt T)\), from <a href="https://arxiv.org/pdf/2305.14709.pdf" target=&ldquo;blank&rdquo;>Regret Matching+:(In) Stability and Fast Convergence in Games</a>
+</p>
+</li>
+<li><p>FTRL则是另一条路，给相邻时刻动作的转变加正则，这样规避了FTL的缺点；
+</p>
+</li>
+<li><p>当正则项为熵的时候，FTRL等价于著名的MWU。MWU的Regret为\(\Omega(\sqrt T)\), from <a href="https://arxiv.org/pdf/2006.04953.pdf" target=&ldquo;blank&rdquo;>Hedging in games: Faster convergence of external and swap regrets</a>。
+</p>
+</li>
+<li><p>(Hindsight rationality, informal). The player has “learnt” to play the game when looking back at the history of play, they cannot think of any transformation \(\phi: X \to X\) of their strategies that
+when applied at the whole history of play would have given strictly better utility to the player. This is from <a href="https://www.mit.edu/\\~gfarina/6S890/lecture4.pdf" target=&ldquo;blank&rdquo;>MIT 6.S890 — Topics in Multiagent Learning (F23)</a>.
+这实际上很像regret了。如果我们能构造相同过程：神经网络给出的解是天启，来和当前决策做比较，就能定义“希望”类似的量（hope），这样所有的regret算法就也有对应版本的hope算法。听上去好像是MPC（先做后续10步决策，但只采用1步）。参考文献：<a href="https://proceedings.mlr.press/v139/agarwal21b/agarwal21b-supp.pdf" target=&ldquo;blank&rdquo;>A Regret Minimization Approach to Iterative Learning Control</a>, <a href="https://arxiv.org/pdf/1902.08967.pdf" target=&ldquo;blank&rdquo;>An Online Learning Approach to Model Predictive Control</a>
+</p>
+</li>
+<li><p>OMD和FTRL都有predictive <a href="https://www.cs.cmu.edu/~sandholm/cs15-888F21/L07_ftrl_omd.pdf" target=&ldquo;blank&rdquo;>版本</a>
+</p>
+</li>
+</ul>
+<h2>Blackwell Approachability</h2>
+<ul>
+<li><p><a href="https://www.mit.edu/~gfarina/6S890/L05_appendix.pdf" target=&ldquo;blank&rdquo;>From  Blackwell approachability algorithms to  regret matching algorithms</a>
+</p>
+</li>
+<li><p><a href="http://www.cs.cmu.edu/~sandholm/cs15-888F21/L08_predictive_approachability.pdf" target=&ldquo;blank&rdquo;>From regret minimization algorithm to Blackwell approachability algorithms</a>
+</p>
+</li>
+<li><p><a href="https://proceedings.mlr.press/v19/abernethy11b/abernethy11b.pdf" target=&ldquo;blank&rdquo;>Blackwell approachability and no-regret learning are equivalent</a>
+</p>
+</li>
+<li><p><a href="https://arxiv.org/pdf/2007.14358.pdf" target=&ldquo;blank&rdquo;>Connecting FTRL, OMD with RM, RM+ using Blackwell approachability algorithm</a>
+</p>
+</li>
+<li><p>从 External Regret 到 \(\Phi\)-Regret。目前建立的联系都是 Blackwell Approachability 和 External Regret 之间的，能不能推广到 \(\Phi\)-Regret 呢？
+</p>
+</li>
+<li><p>区域 \(S\) 是不是就是均衡的范围？类似于 <a href="https://arxiv.org/pdf/2305.19496.pdf" target=&ldquo;blank&rdquo;>Is Learning in Games Good for the Learners?</a> 的 <a href="https://neurips.cc/media/neurips-2023/Slides/70694.pdf" target=&ldquo;blank&rdquo;>图示</a>。
+</p>
+</li>
+<li><p>Last-iterate 版本的 Blackwell Approachability 长啥样？目前的 Blackwell Approachability 和 Average-iterate 的收敛性有很强的关系，那么适用于 Last-iterate 的在线算法可否找到对应的 Blackwell Approachability？
+</p>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</body>
+</html>
