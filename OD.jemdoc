@@ -18,7 +18,7 @@ when applied at the whole history of play would have given strictly better utili
 - [http://www.cs.cmu.edu/~sandholm/cs15-888F21/L08_predictive_approachability.pdf From regret minimization algorithm to Blackwell approachability algorithms]
 - [https://proceedings.mlr.press/v19/abernethy11b/abernethy11b.pdf Blackwell approachability and no-regret learning are equivalent]
 - [https://arxiv.org/pdf/2007.14358.pdf Connecting FTRL, OMD with RM, RM\+ using Blackwell approachability algorithm]
+- [https://valuetools.eai-conferences.org/2014/media/uploads/ShimkinValutools2014.pdf Blackwell’s Approachability and No-Regret Learning Algorithms(2014)]
 - 从 External Regret 到 $\Phi$-Regret。目前建立的联系都是 Blackwell Approachability 和 External Regret 之间的，能不能推广到 $\Phi$-Regret 呢？
 - 区域 $S$ 是不是就是均衡的范围？类似于 [https://arxiv.org/pdf/2305.19496.pdf Is Learning in Games Good for the Learners?] 的 [https://neurips.cc/media/neurips-2023/Slides/70694.pdf 图示]。
 - Last-iterate 版本的 Blackwell Approachability 长啥样？目前的 Blackwell Approachability 和 Average-iterate 的收敛性有很强的关系，那么适用于 Last-iterate 的在线算法可否找到对应的 Blackwell Approachability？
-
