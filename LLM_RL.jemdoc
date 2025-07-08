@@ -19,9 +19,6 @@
 [https://arxiv.org/abs/1909.11942 ALBERT: A Lite BERT for Self-supervised Learning of Language Representations].
 
 
-== Long Context and Reasoning
-- 长文（Long Context）和推理能力（Long CoT）的共同底层特性都是长距离依赖能力，因此训了一个另一个也能提升。能不能类似于self play的做法，迭代式推进模型长文和推理能力呢？
-
 
 == Reinforcement Learning
 - PPO based DPO，reward应该有着clip操作。
