@@ -26,8 +26,20 @@ export PYTHONPATH=/home/caihuaiguang/DSG/dattri:$PYTHONPATH
 \-h 代表 human可读，\. 表示递归显示当前目录下所有目录的大小
 
 du -h .
-cat /etc/issue
 ~~~
+
+
+~~~
+{查看文件前1行}{}
+head -n 1 file.txt
+~~~
+
+
+~~~
+{查看文件总行数}{}
+wc -l
+~~~
+
 
 ~~~
 {查看当前版本号 }{} 
