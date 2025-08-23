@@ -4,12 +4,12 @@
 ~~~ 
 {}{img_left}{pictures/chg.jpg}{alt text}{120}{150}{./pictures/chg.jpg}
 Independent Researcher\n
+[https://www.meituan.com/ Meituan] \n
 [http://english.ia.cas.cn/ Institute of Automation, Chinese Academy of Sciences] \n
 [https://www.sysu.edu.cn/ Sun Yat-Sen University]\n
 # [https://english.ucas.ac.cn/  University of Chinese Academy of Sciences (UCAS)] \n
 E-mail: caihuaiguang AT gmail.com \n\n
-[https://github.com/caihuaiguang \[Github\]] [https://scholar.google.com/citations?user=2QcmztMAAAAJ&hl=en \[Google Scholar\]] [./my_summary/蔡怀广_自动化所_中山大学_博弈论_大模型.pdf \[CV\]]\n
-
+[https://github.com/caihuaiguang \[Github\]] [https://scholar.google.com/citations?user=2QcmztMAAAAJ&hl=en \[Google Scholar\]] \n
 #  [./my_summary/蔡怀广_自动化所_中山大学_博弈论_大模型.pdf \[CV\]]
 # {{<td width="35%" align ="center">  
 # <img height="70"  src="pictures/UCAS.png" border="0" style="float:middle"> </td>}}
@@ -20,7 +20,7 @@ My research aims to develop *reliable*, *explainable*, and *practical* decision-
 Currently, my focus is on enhancing the *reasoning capabilities* of large language models.
 - Algorithms (Algorithmic Game Theory, Online Learning Theory, Ad Auction)
 - Machine Learning (Explainable AI, Edge computing, Recommendation system)
-- Large Language Models (Long Context, Enhanced Reasoning, Efficient Training)
+- Large Language Models (Continual Pretraining, Enhanced Reasoning, Long Context)
 
 # {{
 # <div style="text-align: center;">
@@ -86,3 +86,4 @@ I received my bachelor's degree in Computer Science from [https://cse.sysu.edu.c
 #  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
 #  PARTICULAR PURPOSE. See the [http://www.gnu.org/licenses/gpl-3.0.html GNU
 #  General Public License] for more details.
+
