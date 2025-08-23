@@ -50,7 +50,7 @@ Arxiv
 *CAMs as Shapley Value-based Explainers* 
 [https://arxiv.org/abs/2501.06261 \[Paper\]]
 [https://github.com/caihuaiguang/pytorch-shapley-cam \[Code\]]
-[https://github.com/jacobgil/pytorch-grad-cam \[Merged into the official GradCAM repository (11k stars)\]]\n
+[https://github.com/jacobgil/pytorch-grad-cam \[Merged into the official GradCAM repository (12k stars)\]]\n
 Huaiguang Cai\n
 The Visual Computer (*SCI*)
 
@@ -86,4 +86,5 @@ I received my bachelor's degree in Computer Science from [https://cse.sysu.edu.c
 #  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
 #  PARTICULAR PURPOSE. See the [http://www.gnu.org/licenses/gpl-3.0.html GNU
 #  General Public License] for more details.
+
 
