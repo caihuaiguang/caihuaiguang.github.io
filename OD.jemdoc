@@ -12,6 +12,7 @@
 when applied at the whole history of play would have given strictly better utility to the player. This is from [https://www.mit.edu/\~gfarina/6S890/lecture4.pdf MIT 6.S890 — Topics in Multiagent Learning (F23)].
  这实际上很像regret了。如果我们能构造相同过程：神经网络给出的解是天启，来和当前决策做比较，就能定义“希望”类似的量（hope），这样所有的regret算法就也有对应版本的hope算法。听上去好像是MPC（先做后续10步决策，但只采用1步）。参考文献：[https://proceedings.mlr.press/v139/agarwal21b/agarwal21b-supp.pdf A Regret Minimization Approach to Iterative Learning Control], [https://arxiv.org/pdf/1902.08967.pdf An Online Learning Approach to Model Predictive Control]
 - OMD和FTRL都有predictive [https://www.cs.cmu.edu/~sandholm/cs15-888F21/L07_ftrl_omd.pdf 版本]
+- [https://www.cs.cmu.edu/~sandholm/cs15-888F25/ Computational Game Solving (Fall 2025)]
 
 == Blackwell Approachability
 - [https://www.mit.edu/~gfarina/6S890/L05_appendix.pdf From  Blackwell approachability algorithms to  regret matching algorithms]
